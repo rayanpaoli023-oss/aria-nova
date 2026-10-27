@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aria Nova — Restaurant gastronomique à Bonifacio</title>
+<meta name="description" content="Aria Nova, restaurant gastronomique corse dans la haute ville de Bonifacio. Cuisine faite maison, producteurs locaux, cave 100 % corse.">
+<meta name="theme-color" content="#120F0C">
+<meta property="og:title" content="Aria Nova — Bonifacio">
+<meta property="og:description" content="Restaurant gastronomique corse, haute ville de Bonifacio.">
+<meta property="og:image" content="assets/facade.jpg">
+<link rel="icon" href="assets/logo-or.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&amp;display=swap">
+<style>
+body{margin:0;background:#FAF7F2}
+a{color:#7A5B33}a:hover{color:#4E3A1F}
+.an-dark a{color:#D8B582}.an-dark a:hover{color:#F1DDBD}
+@keyframes anRise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes anFade{from{opacity:0}to{opacity:1}}
+@keyframes anKen{from{transform:scale(1.18)}to{transform:scale(1.02)}}
+@keyframes anDrift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes anLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes anReveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes anCurtain{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes anScroll{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes anSwap{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:none}}
+@keyframes anFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.an-in{opacity:0;animation:anRise 1.2s cubic-bezier(.2,.7,.2,1) forwards}
+.an-fade{opacity:0;animation:anFade 1.8s ease forwards}
+.an-ken{animation:anKen 14s cubic-bezier(.2,.7,.2,1) both}
+.an-curtain{animation:anCurtain 1.6s cubic-bezier(.7,0,.2,1) both}
+.an-logo{animation:anReveal 2.2s cubic-bezier(.65,0,.25,1) .9s both}
+.an-rule{transform-origin:left;animation:anLine 1.4s cubic-bezier(.2,.7,.2,1) .8s both}
+.an-scroll{animation:anScroll 2.4s cubic-bezier(.65,0,.35,1) infinite}
+.an-swap{animation:anSwap .9s cubic-bezier(.2,.7,.2,1) both}
+.an-float{animation:anFloat 8s ease-in-out infinite}
+.an-marquee{display:flex;width:max-content;animation:anDrift 42s linear infinite}
+.an-btn{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,background-color .35s,color .35s}
+.an-btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px -16px rgba(0,0,0,.55)}
+.an-zoom{overflow:hidden}
+.an-zoom img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.an-zoom:hover img{transform:scale(1.07)}
+.an-dish{transition:padding-left .35s,background-color .35s}
+.an-dish:hover{padding-left:14px;background-color:rgba(201,156,97,.08)}
+.an-link{position:relative;text-decoration:none}
+.an-link:after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s}
+.an-link:hover:after{transform:scaleX(1);transform-origin:left}
+.an-eb{display:flex;align-items:center;gap:16px}
+.an-eb::before{content:"";flex:0 0 auto;width:42px;height:1px;background:currentColor;opacity:.8}
+.an-langswap{animation:anFade .6s ease both}
+.an-strip{scroll-snap-type:x mandatory;scrollbar-width:none}
+.an-strip::-webkit-scrollbar{display:none}
+.an-strip > *{scroll-snap-align:start}
+input,select{font:inherit}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid #C99C61;outline-offset:2px}
+
+@media (max-width: 860px){
+.an-navlinks,.an-lang,.an-navcta{display:none !important}
+.an-burger{display:inline-flex !important}
+.an-hero{min-height:760px !important}
+.an-hero-cols{grid-template-columns:1fr !important}
+.an-hero-side{display:none !important}
+.an-floatcard{display:none !important}
+.an-span2{grid-column:auto !important}
+.an-row2{grid-row:auto !important}
+.an-sec{padding-top:84px !important;padding-bottom:84px !important}
+.an-cave-grid{grid-template-columns:1fr 1fr !important}
+.an-cave-grid > div:first-child{grid-column:1 / -1 !important}
+.an-cave-grid img{height:auto !important;min-height:0 !important;aspect-ratio:3 / 4}
+.an-cave-grid > div:first-child img{aspect-ratio:2 / 3}
+.an-mobilebar{display:flex !important}
+.an-footer{padding-bottom:110px !important}
+.an-sticky{position:static !important}
+.an-bigimg{height:380px !important}
+}
+@media (prefers-reduced-motion: reduce){.an-in,.an-fade,.an-ken,.an-curtain,.an-logo,.an-rule,.an-swap,.an-r,.an-rimg{animation:none !important;opacity:1;transform:none;clip-path:none}.an-marquee,.an-float,.an-scroll{animation:none}}
+</style>
+<style>
+html.an-ready .an-in,html.an-ready .an-fade,html.an-ready .an-curtain,html.an-ready .an-logo,html.an-ready .an-ken,html.an-ready .an-rule{animation:none!important;opacity:1!important;clip-path:none!important;transform:none!important}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+
+<div style="font-family: 'Jost', system-ui, sans-serif; font-weight: 400; color: #1A1714; background-color: #FAF7F2; width: 100%; overflow: hidden; position: relative">
+
+  <sc-if value="{{isHome}}" hint-placeholder-val="{{ true }}">
+  <header id="top" class="an-hero an-dark" style="position: relative; min-height: 900px; background-color: #120F0C; color: #F4EEE4; display: flex; flex-direction: column; overflow: hidden">
+    <div class="an-hero-cols" aria-hidden="true" style="position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+      <div class="an-curtain" style="overflow: hidden; animation-delay: .05s"><img class="an-ken" src="assets/facade.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover"></div>
+      <div class="an-curtain an-hero-side" style="overflow: hidden; animation-delay: .2s"><img class="an-ken" src="assets/plat-fleurs.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; animation-delay: .2s"></div>
+      <div class="an-curtain an-hero-side" style="overflow: hidden; animation-delay: .35s"><img class="an-ken" src="assets/cave.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; animation-delay: .35s"></div>
+    </div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background-color: rgba(18,15,12,.58)"></div>
+    <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 320px; background-image: linear-gradient(to top, rgba(18,15,12,.95), rgba(18,15,12,0))"></div>
+
+    <nav aria-label="Navigation principale" style="position: relative; z-index: 6; max-width: 1320px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 26px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px">
+      <div class="an-navlinks an-fade" style="display: flex; flex-wrap: wrap; gap: 4px 26px; animation-delay: 1.4s">
+        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="7">
+          <button type="button" onClick="{{n.go}}" aria-current="{{n.current}}" class="an-link" style="{{n.style}}">{{n.label}}</button>
+        </sc-for>
+      </div>
+      <a href="#top" class="an-burger" aria-label="Aria Nova, accueil" style="display: none; line-height: 0"><img src="assets/logo-blanc.svg" alt="Aria Nova" style="height: 34px; width: auto"></a>
+      <div class="an-fade" style="display: flex; align-items: center; gap: 10px; animation-delay: 1.5s">
+        <div class="an-lang" role="group" aria-label="Langue" style="display: flex">
+          <sc-for list="{{langs}}" as="l" hint-placeholder-count="3">
+            <button type="button" onClick="{{l.pick}}" aria-pressed="{{l.pressed}}" style="{{l.style}}">{{l.code}}</button>
+          </sc-for>
+        </div>
+        <a href="#reserver" class="an-btn an-navcta" style="text-decoration: none; background-color: #F4EEE4; color: #1A1714; padding: 0 26px; min-height: 46px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase">{{t.reserve}}</a>
+        <button type="button" class="an-burger" onClick="{{toggleMenu}}" aria-label="Ouvrir le menu" aria-expanded="{{menuExpanded}}" style="display: none; width: 48px; height: 48px; align-items: center; justify-content: center; background-color: transparent; border: 1px solid rgba(244,238,228,.45); color: #F4EEE4; cursor: pointer">
+          <svg aria-hidden="true" width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="0" y1="1" x2="20" y2="1"></line><line x1="0" y1="7" x2="20" y2="7"></line><line x1="6" y1="13" x2="20" y2="13"></line></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div style="position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px 60px">
+      <p class="an-in" style="margin: 0 0 34px; font-size: 12px; letter-spacing: .5em; text-transform: uppercase; color: #E7CFA6; animation-delay: .7s">{{t.hero_kicker}}</p>
+      <h1 style="margin: 0; line-height: 0"><img class="an-logo" src="assets/logo-blanc.svg" alt="Aria Nova" style="width: min(760px, 86%); height: auto"></h1>
+      <p class="an-in" style="margin: 38px 0 0; max-width: 620px; font-size: clamp(19px, 2vw, 24px); font-weight: 200; line-height: 1.6; letter-spacing: .04em; animation-delay: 1.6s">{{t.hero_sub}}</p>
+      <div class="an-in" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 46px; animation-delay: 1.8s">
+        <a href="#reserver" class="an-btn" style="text-decoration: none; background-color: #C5B9A2; color: #1A1714; padding: 0 36px; min-height: 56px; display: inline-flex; align-items: center; font-size: 12px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase">{{t.reserve_table}}</a>
+        <a href="#carte" class="an-btn" style="text-decoration: none; color: #F4EEE4; border: 1px solid rgba(244,238,228,.6); padding: 0 36px; min-height: 56px; display: inline-flex; align-items: center; font-size: 12px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase">{{t.discover}}</a>
+      </div>
+    </div>
+
+    <div class="an-fade" style="position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 14px; padding-bottom: 34px; animation-delay: 2.4s">
+      <span style="font-size: 10px; letter-spacing: .5em; text-transform: uppercase; color: #C9BFAF">{{t.scroll}}</span>
+      <span aria-hidden="true" style="display: block; width: 1px; height: 56px; background-color: rgba(244,238,228,.25); position: relative; overflow: hidden"><span class="an-scroll" style="position: absolute; inset: 0; background-color: #E7CFA6"></span></span>
+    </div>
+
+    <div style="position: relative; z-index: 3; border-top: 1px solid rgba(244,238,228,.14)">
+      <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 20px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 40px; font-size: 13px; font-weight: 300; letter-spacing: .06em; color: #E9E1D3">
+        <span><span style="color: #E7CFA6; letter-spacing: .26em; text-transform: uppercase; font-size: 10px; margin-right: 10px">{{t.open_l}}</span>{{t.open_v}}</span>
+        <span><span style="color: #E7CFA6; letter-spacing: .26em; text-transform: uppercase; font-size: 10px; margin-right: 10px">{{t.season_l}}</span>{{t.season_v}}</span>
+        <span><span style="color: #E7CFA6; letter-spacing: .26em; text-transform: uppercase; font-size: 10px; margin-right: 10px">{{t.addr_l}}</span>4 rue Fred Scamaroni</span>
+        <a href="tel:+33495731985" style="color: #F1DDBD; text-decoration: none">04 95 73 19 85</a>
+      </div>
+    </div>
+  </header>
+  </sc-if>
+
+  <sc-if value="{{isSub}}" hint-placeholder-val="{{ false }}">
+    <header class="an-dark" style="position: relative; min-height: 640px; background-color: #120F0C; color: #F4EEE4; display: flex; flex-direction: column; overflow: hidden">
+      <div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden"><img class="an-ken" key="{{pageKey}}" src="{{pageImg}}" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: .5"></div>
+      <div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(to top, rgba(18,15,12,.92), rgba(18,15,12,.25) 60%, rgba(18,15,12,.55))"></div>
+      <nav aria-label="Navigation principale" style="position: relative; z-index: 6; max-width: 1320px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px">
+        <button type="button" onClick="{{goHome}}" aria-label="Aria Nova, accueil" style="background: none; border: 0; padding: 0; cursor: pointer; line-height: 0"><img src="assets/logo-blanc.svg" alt="Aria Nova" style="height: 40px; width: auto"></button>
+        <div class="an-navlinks" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 26px">
+          <sc-for list="{{navItems}}" as="n" hint-placeholder-count="7">
+            <button type="button" onClick="{{n.go}}" aria-current="{{n.current}}" class="an-link" style="{{n.style}}">{{n.label}}</button>
+          </sc-for>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px">
+          <button type="button" onClick="{{goReserve}}" class="an-btn an-navcta" style="border: 0; cursor: pointer; background-color: #F4EEE4; color: #1A1714; padding: 0 24px; min-height: 46px; font-family: Jost, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase">{{t.reserve}}</button>
+          <button type="button" class="an-burger" onClick="{{toggleMenu}}" aria-label="Ouvrir le menu" aria-expanded="{{menuExpanded}}" style="display: none; width: 48px; height: 48px; align-items: center; justify-content: center; background-color: transparent; border: 1px solid rgba(244,238,228,.45); color: #F4EEE4; cursor: pointer">
+            <svg aria-hidden="true" width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="0" y1="1" x2="20" y2="1"></line><line x1="0" y1="7" x2="20" y2="7"></line><line x1="6" y1="13" x2="20" y2="13"></line></svg>
+          </button>
+        </div>
+      </nav>
+      <div key="{{pageKey}}" style="position: relative; z-index: 3; flex: 1; max-width: 1320px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 60px 24px 80px; display: flex; flex-direction: column; justify-content: flex-end">
+        <p class="an-in an-eb" style="margin: 0 0 26px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #E7CFA6; animation-delay: .1s">{{pageKicker}}</p>
+        <h1 class="an-in" style="margin: 0; max-width: 980px; font-weight: 200; font-size: clamp(34px, 5.2vw, 72px); line-height: 1.08; letter-spacing: .04em; text-transform: uppercase; animation-delay: .25s">{{pageTitle}}</h1>
+        <p class="an-in" style="margin: 26px 0 0; max-width: 620px; font-size: clamp(17px, 1.6vw, 21px); font-weight: 200; line-height: 1.6; color: #E9E1D3; animation-delay: .4s">{{pageLead}}</p>
+      </div>
+    </header>
+
+    <article key="{{pageKey}}" class="an-swap" style="background-color: #FAF7F2">
+      <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 110px 24px 40px">
+        <sc-for list="{{pageSections}}" as="s" hint-placeholder-count="4">
+          <section style="display: flex; flex-wrap: wrap; gap: 30px 70px; padding: 56px 0; border-top: 1px solid #D9CFBE">
+            <div style="flex: 1 1 300px; min-width: 0">
+              <p style="margin: 0 0 18px; font-size: 13px; letter-spacing: .3em; color: #7A5B33">{{s.num}}</p>
+              <h2 style="margin: 0; font-weight: 300; font-size: clamp(24px, 2.4vw, 34px); line-height: 1.25; letter-spacing: .05em; text-transform: uppercase">{{s.h}}</h2>
+              <sc-if value="{{s.hasImg}}" hint-placeholder-val="{{ false }}">
+                <div class="an-zoom" style="margin-top: 34px"><img src="{{s.img}}" alt="{{s.h}}" style="display: block; width: 100%; height: 340px; object-fit: cover"></div>
+              </sc-if>
+            </div>
+            <div style="flex: 1.5 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+              <sc-for list="{{s.ps}}" as="para" hint-placeholder-count="2">
+                <p style="margin: 0; font-size: 17px; font-weight: 300; line-height: 1.9; color: #3E3832">{{para.txt}}</p>
+              </sc-for>
+            </div>
+          </section>
+        </sc-for>
+      </div>
+
+      <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 0 24px 110px">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; background-color: #1F1B17; color: #F4EEE4; padding: clamp(28px, 5vw, 56px)" class="an-dark">
+          <div>
+            <p style="margin: 0; font-size: 11px; letter-spacing: .4em; text-transform: uppercase; color: #E7CFA6">{{t.rs_eb}}</p>
+            <p style="margin: 12px 0 0; font-size: clamp(24px, 3vw, 38px); font-weight: 200; letter-spacing: .05em; text-transform: uppercase">{{t.rs_h_a}} <span style="color: #E7CFA6; font-style: italic; font-weight: 300">{{t.rs_h_b}}</span></p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px">
+            <a href="tel:+33495731985" class="an-btn" style="text-decoration: none; color: #F4EEE4; border: 1px solid rgba(244,238,228,.5); padding: 0 26px; min-height: 52px; display: inline-flex; align-items: center; font-size: 12px; letter-spacing: .2em">04 95 73 19 85</a>
+            <button type="button" onClick="{{goReserve}}" class="an-btn" style="border: 0; cursor: pointer; background-color: #C5B9A2; color: #1A1714; padding: 0 30px; min-height: 52px; font-family: Jost, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase">{{t.reserve_table}}</button>
+          </div>
+        </div>
+
+        <p class="an-eb" style="margin: 90px 0 30px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #7A5B33">{{t.more}}</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+          <sc-for list="{{related}}" as="r" hint-placeholder-count="3">
+            <button type="button" onClick="{{r.go}}" class="an-zoom an-btn" style="position: relative; display: block; width: 100%; height: 360px; padding: 0; border: 0; cursor: pointer; text-align: left; background-color: #120F0C; overflow: hidden">
+              <img src="{{r.img}}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .6">
+              <span style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px; background-image: linear-gradient(to top, rgba(18,15,12,.9), rgba(18,15,12,0)); display: flex; flex-direction: column; gap: 10px">
+                <span style="font-family: Jost, sans-serif; font-size: 11px; letter-spacing: .36em; text-transform: uppercase; color: #E7CFA6">{{r.kicker}}</span>
+                <span style="font-family: Jost, sans-serif; font-size: 20px; font-weight: 300; line-height: 1.3; letter-spacing: .05em; text-transform: uppercase; color: #F4EEE4">{{r.title}}</span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </article>
+  </sc-if>
+
+
+  <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+    <div class="an-dark" role="dialog" aria-label="Menu" style="position: fixed; inset: 0; z-index: 50; background-color: #120F0C; color: #F4EEE4; display: flex; flex-direction: column; padding: 26px 24px; box-sizing: border-box">
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <img src="assets/logo-blanc.svg" alt="Aria Nova" style="height: 34px; width: auto">
+        <button type="button" onClick="{{toggleMenu}}" aria-label="Fermer le menu" style="width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; border: 1px solid rgba(244,238,228,.45); color: #F4EEE4; cursor: pointer"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="1" x2="15" y2="15"></line><line x1="15" y1="1" x2="1" y2="15"></line></svg></button>
+      </div>
+      <div style="display: flex; flex-direction: column; margin-top: 50px">
+        <sc-for list="{{navItems}}" as="n" hint-placeholder-count="7">
+          <button type="button" onClick="{{n.go}}" aria-current="{{n.current}}" style="{{n.styleBig}}">{{n.label}}</button>
+        </sc-for>
+      </div>
+      <div style="display: flex; gap: 6px; margin-top: 30px">
+        <sc-for list="{{langs}}" as="l" hint-placeholder-count="3">
+          <button type="button" onClick="{{l.pick}}" aria-pressed="{{l.pressed}}" style="{{l.styleDark}}">{{l.code}}</button>
+        </sc-for>
+      </div>
+      <a href="#reserver" onClick="{{goReserve}}" style="margin-top: auto; text-decoration: none; background-color: #C5B9A2; color: #1A1714; min-height: 58px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase">{{t.reserve_table}}</a>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{isHome}}" hint-placeholder-val="{{ true }}">
+  <section aria-label="Distinctions" style="background-color: #FAF7F2; overflow: hidden; padding: 30px 0; border-bottom: 1px solid #E8E0D2">
+    <div class="an-marquee" style="gap: 60px; font-size: 13px; font-weight: 300; letter-spacing: .36em; text-transform: uppercase; white-space: nowrap; color: #4A433B">
+      <span>{{t.gm}}</span><span style="color: {{accent}}">◆</span><span>Petit Futé</span><span style="color: {{accent}}">◆</span><span>Guide du Routard</span><span style="color: {{accent}}">◆</span><span>Cercle des grandes maisons</span><span style="color: {{accent}}">◆</span><span>{{t.nustrale}}</span><span style="color: {{accent}}">◆</span>
+      <span>{{t.gm}}</span><span style="color: {{accent}}">◆</span><span>Petit Futé</span><span style="color: {{accent}}">◆</span><span>Guide du Routard</span><span style="color: {{accent}}">◆</span><span>Cercle des grandes maisons</span><span style="color: {{accent}}">◆</span><span>{{t.nustrale}}</span><span style="color: {{accent}}">◆</span>
+    </div>
+  </section>
+
+  <section id="maison" class="an-sec" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 140px 24px 120px">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px 80px; align-items: flex-end">
+      <div class="an-r" style="flex: 2 1 520px; min-width: 0">
+        <p class="an-eb" style="margin: 0 0 24px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #7A5B33">{{t.nav_maison}}</p>
+        <h2 style="margin: 0; font-weight: 200; font-size: clamp(30px, 4vw, 56px); line-height: 1.18; letter-spacing: .04em; text-transform: uppercase">{{t.m_h_a}} <span style="color: {{accent}}; font-style: italic; font-weight: 300">{{t.m_h_b}}</span></h2>
+      </div>
+      <p class="an-r" style="flex: 1 1 300px; min-width: 0; margin: 0; font-size: 17px; font-weight: 300; line-height: 1.85; color: #4A433B">{{t.m_p}}</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 80px">
+      <figure class="an-zoom an-rimg an-row2" style="margin: 0; grid-row: span 2; position: relative">
+        <img src="assets/entree-salle.jpg" alt="L'entrée végétalisée d'Aria Nova et la salle voûtée en pierre" style="display: block; width: 100%; height: 100%; min-height: 560px; object-fit: cover">
+        <figcaption style="position: absolute; left: 0; bottom: 0; background-color: #FAF7F2; padding: 14px 18px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase">{{t.cap_salle}}</figcaption>
+      </figure>
+      <figure class="an-zoom an-rimg" style="margin: 0; position: relative">
+        <img src="assets/table-chefs.jpg" alt="Table en bois d'olivier dressée, vue du dessus" style="display: block; width: 100%; height: 272px; object-fit: cover">
+        <figcaption style="position: absolute; left: 0; bottom: 0; background-color: #FAF7F2; padding: 14px 18px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase">{{t.cap_tables}}</figcaption>
+      </figure>
+      <figure class="an-zoom an-rimg" style="margin: 0; position: relative">
+        <img src="assets/herbes.jpg" alt="Herbes fraîches du potager préparées en cuisine" style="display: block; width: 100%; height: 272px; object-fit: cover">
+        <figcaption style="position: absolute; left: 0; bottom: 0; background-color: #FAF7F2; padding: 14px 18px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase">{{t.cap_maison}}</figcaption>
+      </figure>
+      <figure class="an-zoom an-rimg an-span2" style="margin: 0; position: relative; grid-column: span 2">
+        <img src="assets/table-plat.jpg" alt="Service à table, assiette du chef sur bois d'olivier" style="display: block; width: 100%; height: 272px; object-fit: cover">
+        <figcaption style="position: absolute; left: 0; bottom: 0; background-color: #FAF7F2; padding: 14px 18px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase">{{t.cap_midi}}</figcaption>
+      </figure>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 90px; border-top: 1px solid #D9CFBE">
+      <div class="an-r" style="padding: 32px 24px 0 0">
+        <p style="margin: 0; font-weight: 200; font-size: 56px; line-height: 1">2013</p>
+        <p style="margin: 14px 0 0; font-size: 14px; font-weight: 300; line-height: 1.7; color: #5A5249">{{t.st1}}</p>
+      </div>
+      <div class="an-r" style="padding: 32px 24px 0 0">
+        <p style="margin: 0; font-weight: 200; font-size: 56px; line-height: 1">100 %</p>
+        <p style="margin: 14px 0 0; font-size: 14px; font-weight: 300; line-height: 1.7; color: #5A5249">{{t.st2}}</p>
+      </div>
+      <div class="an-r" style="padding: 32px 24px 0 0">
+        <p style="margin: 0; font-weight: 200; font-size: 56px; line-height: 1">1<sup style="font-size: 22px">{{t.st3_sup}}</sup></p>
+        <p style="margin: 14px 0 0; font-size: 14px; font-weight: 300; line-height: 1.7; color: #5A5249">{{t.st3}}</p>
+      </div>
+      <div class="an-r" style="padding: 32px 0 0">
+        <p style="margin: 0; font-weight: 200; font-size: 56px; line-height: 1">5</p>
+        <p style="margin: 14px 0 0; font-size: 14px; font-weight: 300; line-height: 1.7; color: #5A5249">{{t.st4}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Les assiettes" style="background-color: #120F0C; color: #F4EEE4; padding: 110px 0 100px" class="an-dark an-sec">
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+      <div class="an-r">
+        <p class="an-eb" style="margin: 0 0 22px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #E7CFA6">{{t.pl_eb}}</p>
+        <h2 style="margin: 0; font-weight: 200; font-size: clamp(30px, 4vw, 56px); line-height: 1.12; letter-spacing: .06em; text-transform: uppercase">{{t.pl_h_a}} <span style="color: #E7CFA6; font-style: italic; font-weight: 300">{{t.pl_h_b}}</span></h2>
+      </div>
+      <p style="margin: 0; font-size: 13px; letter-spacing: .26em; text-transform: uppercase; color: #A99F90">{{t.swipe}}</p>
+    </div>
+    <div class="an-strip" style="display: flex; gap: 18px; overflow-x: auto; margin-top: 56px; padding: 0 24px 8px; box-sizing: border-box">
+      <sc-for list="{{plates}}" as="p" hint-placeholder-count="6">
+        <figure class="an-zoom" style="margin: 0; flex: 0 0 auto; width: min(400px, 78%)">
+          <img src="{{p.src}}" alt="{{p.alt}}" style="display: block; width: 100%; height: 480px; object-fit: cover">
+          <figcaption style="display: flex; justify-content: space-between; gap: 12px; padding-top: 18px; border-top: 1px solid rgba(244,238,228,.2); margin-top: 18px">
+            <span style="font-size: 15px; font-weight: 300; letter-spacing: .06em">{{p.title}}</span>
+            <span style="font-size: 12px; letter-spacing: .24em; color: #E7CFA6">{{p.num}}</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  </sc-if>
+
+  <sc-if value="{{showCarte}}" hint-placeholder-val="{{ true }}">
+  <section id="carte" class="an-sec" style="background-color: #FFFFFF">
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 130px 24px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 56px">
+        <div>
+          <p class="an-eb" style="margin: 0 0 22px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #7A5B33">{{t.nav_carte}}</p>
+          <h2 style="margin: 0; font-weight: 200; font-size: clamp(34px, 4.4vw, 62px); line-height: 1.08; letter-spacing: .06em; text-transform: uppercase">{{t.c_h_a}} <span style="color: {{accent}}; font-style: italic; font-weight: 300">{{t.c_h_b}}</span></h2>
+        </div>
+        <p style="margin: 0; max-width: 380px; font-size: 13px; font-weight: 300; line-height: 1.7; color: #6F665B">{{t.extrait}}</p>
+      </div>
+
+      <div role="tablist" aria-label="Sections de la carte" style="display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 28px; border-bottom: 1px solid #E2D9CA">
+        <sc-for list="{{tabs}}" as="t2" hint-placeholder-count="7">
+          <button type="button" role="tab" aria-selected="{{t2.selected}}" onClick="{{t2.pick}}" class="an-btn" style="{{t2.style}}">{{t2.label}}</button>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 56px; margin-top: 48px">
+        <div style="flex: 1 1 360px; min-width: 0">
+          <div class="an-sticky" style="position: sticky; top: 30px">
+            <div class="an-zoom" style="position: relative">
+              <img class="an-swap an-bigimg" key="{{tabId}}" src="{{tabImg}}" alt="{{tabAlt}}" style="display: block; width: 100%; height: 520px; object-fit: cover">
+              <span style="position: absolute; left: 0; bottom: 0; background-color: #FFFFFF; padding: 14px 18px; font-size: 11px; letter-spacing: .32em; text-transform: uppercase">{{tabLabel}}</span>
+            </div>
+            <p style="margin: 24px 0 0; font-size: 16px; font-weight: 300; line-height: 1.8; color: #4A433B">{{tabIntro}}</p>
+          </div>
+        </div>
+
+        <div style="flex: 1.35 1 520px; min-width: 0">
+          <sc-if value="{{isDishes}}" hint-placeholder-val="{{ true }}">
+            <div role="tabpanel" key="{{tabId}}" class="an-swap" style="border-top: 1px solid #E2D9CA">
+              <sc-for list="{{dishes}}" as="d" hint-placeholder-count="6">
+                <div class="an-dish" style="display: flex; align-items: center; gap: 20px; padding: 22px 0; border-bottom: 1px solid #E2D9CA">
+                  <sc-if value="{{d.hasImg}}" hint-placeholder-val="{{ false }}">
+                    <div class="an-zoom" style="flex: 0 0 auto; width: 92px; height: 92px"><img src="{{d.img}}" alt="{{d.alt}}" style="display: block; width: 100%; height: 100%; object-fit: cover"></div>
+                  </sc-if>
+                  <sc-if value="{{d.noImg}}" hint-placeholder-val="{{ true }}">
+                    <span aria-hidden="true" style="flex: 0 0 auto; width: 40px; font-size: 12px; letter-spacing: .2em; color: #A9946F">{{d.num}}</span>
+                  </sc-if>
+                  <div style="flex: 1 1 auto; min-width: 0">
+                    <p style="margin: 0; font-size: 18px; font-weight: 400; line-height: 1.45; letter-spacing: .01em">{{d.name}}</p>
+                    <p style="margin: 6px 0 0; font-size: 13px; font-weight: 300; font-style: italic; line-height: 1.55; color: #6F665B">{{d.sub}}</p>
+                  </div>
+                  <p style="margin: 0; flex: 0 0 auto; align-self: flex-start; padding-top: 2px; text-align: right; font-size: 16px; font-weight: 400; letter-spacing: .06em; color: #7A5B33; white-space: nowrap">{{d.price}}</p>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{isWine}}" hint-placeholder-val="{{ false }}">
+            <div role="tabpanel" class="an-swap" style="display: flex; flex-direction: column; gap: 40px">
+              <sc-for list="{{wineGroups}}" as="g" hint-placeholder-count="5">
+                <div>
+                  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 62px 62px 62px; gap: 8px; align-items: end; padding-bottom: 12px; border-bottom: 1px solid #1A1714">
+                    <p style="margin: 0; font-size: 13px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase">{{g.title}}</p>
+                    <span style="font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #8E2F2A; text-align: right">{{wineHead.r}}</span>
+                    <span style="font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #7A5B33; text-align: right">{{wineHead.b}}</span>
+                    <span style="font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #A8536A; text-align: right">{{wineHead.s}}</span>
+                  </div>
+                  <sc-for list="{{g.rows}}" as="w" hint-placeholder-count="5">
+                    <div class="an-dish" style="display: grid; grid-template-columns: minmax(0, 1fr) 62px 62px 62px; gap: 8px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #E8E0D2">
+                      <span style="font-size: 15px; font-weight: 300; line-height: 1.4">{{w.n}}</span>
+                      <span style="font-size: 14px; text-align: right; color: #3E3832">{{w.r}}</span>
+                      <span style="font-size: 14px; text-align: right; color: #3E3832">{{w.b}}</span>
+                      <span style="font-size: 14px; text-align: right; color: #3E3832">{{w.s}}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 44px">
+            <div style="background-color: #FAF7F2; border: 1px solid #E8E0D2; padding: 26px">
+              <p style="margin: 0; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #7A5B33">{{t.midi_l}}</p>
+              <p style="margin: 10px 0 0; font-size: 21px; font-weight: 300">{{t.midi_t}}</p>
+              <p style="margin: 8px 0 0; font-size: 14px; font-weight: 300; line-height: 1.6; color: #5A5249">{{t.midi_d}}</p>
+            </div>
+            <div style="background-color: #FAF7F2; border: 1px solid #E8E0D2; padding: 26px">
+              <p style="margin: 0; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #7A5B33">{{t.jour_l}}</p>
+              <p style="margin: 10px 0 0; font-size: 21px; font-weight: 300">{{t.jour_t}}</p>
+              <p style="margin: 8px 0 0; font-size: 14px; font-weight: 300; line-height: 1.6; color: #5A5249">{{t.jour_d}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </sc-if>
+
+  <sc-if value="{{isHome}}" hint-placeholder-val="{{ true }}">
+  <section aria-label="Citation" class="an-dark" style="position: relative; min-height: 520px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-color: #120F0C; color: #F4EEE4">
+    <img class="an-rimg" src="assets/table-plat.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .38">
+    <div class="an-r" style="position: relative; padding: 90px 24px; max-width: 900px">
+      <p style="margin: 0; font-size: clamp(30px, 4.6vw, 64px); font-weight: 200; font-style: italic; line-height: 1.2; letter-spacing: .02em">{{t.quote}}</p>
+      <img src="assets/logo-or.svg" alt="Aria Nova" style="width: 200px; height: auto; margin-top: 34px">
+    </div>
+  </section>
+
+  <section id="equipe" class="an-sec" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 140px 24px">
+    <div class="an-r" style="max-width: 860px; margin-bottom: 70px">
+      <p class="an-eb" style="margin: 0 0 24px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #7A5B33">{{t.eq_eb}}</p>
+      <h2 style="margin: 0; font-weight: 200; font-size: clamp(30px, 4vw, 56px); line-height: 1.18; letter-spacing: .04em; text-transform: uppercase">{{t.eq_h_a}} <span style="color: {{accent}}; font-style: italic; font-weight: 300">{{t.eq_h_b}}</span></h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px">
+      <article class="an-r" style="background-color: #FFFFFF; border: 1px solid #E8E0D2">
+        <div class="an-zoom"><img src="assets/plat-fleurs.jpg" alt="Assiette signée du chef, fleurs comestibles du potager" style="display: block; width: 100%; height: 320px; object-fit: cover"></div>
+        <div style="padding: 32px">
+          <p style="margin: 0; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #7A5B33">{{t.r_chef}}</p>
+          <h3 style="margin: 12px 0 0; font-weight: 300; font-size: 26px; letter-spacing: .12em; text-transform: uppercase">Sébastien Caudron</h3>
+          <p style="margin: 14px 0 0; font-size: 15px; font-weight: 300; line-height: 1.75; color: #5A5249">{{t.b_chef}}</p>
+        </div>
+      </article>
+      <article class="an-r" style="background-color: #FFFFFF; border: 1px solid #E8E0D2">
+        <div class="an-zoom"><img src="assets/dessert-meringue.jpg" alt="Dessert de la cheffe pâtissière, meringue et fleur de capucine" style="display: block; width: 100%; height: 320px; object-fit: cover"></div>
+        <div style="padding: 32px">
+          <p style="margin: 0; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #7A5B33">{{t.r_pat}}</p>
+          <h3 style="margin: 12px 0 0; font-weight: 300; font-size: 26px; letter-spacing: .12em; text-transform: uppercase">Karine Broussier</h3>
+          <p style="margin: 14px 0 0; font-size: 15px; font-weight: 300; line-height: 1.75; color: #5A5249">{{t.b_pat}}</p>
+        </div>
+      </article>
+      <article class="an-r" style="background-color: #FFFFFF; border: 1px solid #E8E0D2">
+        <div class="an-zoom"><img src="assets/aubergines.jpg" alt="Les aubergines à la bonifacienne façon Patrick" style="display: block; width: 100%; height: 320px; object-fit: cover"></div>
+        <div style="padding: 32px">
+          <p style="margin: 0; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #7A5B33">{{t.r_host}}</p>
+          <h3 style="margin: 12px 0 0; font-weight: 300; font-size: 26px; letter-spacing: .12em; text-transform: uppercase">Patrick</h3>
+          <p style="margin: 14px 0 0; font-size: 15px; font-weight: 300; line-height: 1.75; color: #5A5249">{{t.b_host}}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="producteurs" class="an-sec" style="background-color: #EFE8DC">
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 130px 24px; display: flex; flex-wrap: wrap; gap: 60px; align-items: center">
+      <div class="an-zoom an-rimg" style="flex: 1 1 400px; min-width: 0; position: relative">
+        <img class="an-bigimg" src="assets/herbes.jpg" alt="Herbes du Potager en Herbes, préparées à la main" style="display: block; width: 100%; height: 600px; object-fit: cover">
+      </div>
+      <div style="flex: 1.2 1 460px; min-width: 0">
+        <div class="an-r">
+          <p class="an-eb" style="margin: 0 0 24px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #7A5B33">{{t.pr_eb}}</p>
+          <h2 style="margin: 0; font-weight: 200; font-size: clamp(30px, 4vw, 56px); line-height: 1.18; letter-spacing: .04em; text-transform: uppercase">{{t.pr_h_a}} <span style="color: {{accent}}; font-style: italic; font-weight: 300">{{t.pr_h_b}}</span></h2>
+          <p style="margin: 26px 0 0; max-width: 520px; font-size: 16px; font-weight: 300; line-height: 1.8; color: #4A433B">{{t.pr_p}}</p>
+        </div>
+        <div style="margin-top: 40px; border-top: 1px solid #D2C7B4">
+          <sc-for list="{{producers}}" as="p" hint-placeholder-count="5">
+            <div class="an-r" style="display: flex; gap: 22px; padding: 22px 0; border-bottom: 1px solid #D2C7B4">
+              <span style="flex: 0 0 auto; font-size: 13px; letter-spacing: .2em; color: #7A5B33">{{p.num}}</span>
+              <div style="min-width: 0">
+                <p style="margin: 0; font-size: 15px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase">{{p.name}}</p>
+                <p style="margin: 6px 0 0; font-size: 14px; font-weight: 300; line-height: 1.65; color: #5A5249">{{p.text}}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cave" class="an-dark an-sec" style="background-color: #1F1B17; color: #F4EEE4">
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 130px 24px; display: flex; flex-wrap: wrap; gap: 60px; align-items: center">
+      <div class="an-r" style="flex: 1 1 400px; min-width: 0">
+        <p class="an-eb" style="margin: 0 0 24px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #E7CFA6">{{t.nav_cave}}</p>
+        <h2 style="margin: 0; font-weight: 200; font-size: clamp(30px, 4vw, 56px); line-height: 1.18; letter-spacing: .04em; text-transform: uppercase">{{t.cv_h_a}} <span style="color: #E7CFA6; font-style: italic; font-weight: 300">{{t.cv_h_b}}</span></h2>
+        <p style="margin: 26px 0 0; font-size: 16px; font-weight: 300; line-height: 1.8; color: #C9BFAF">{{t.cv_p}}</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px">
+          <span style="border: 1px solid rgba(244,238,228,.3); padding: 10px 18px; font-size: 11px; letter-spacing: .26em; text-transform: uppercase">Niellucciu</span>
+          <span style="border: 1px solid rgba(244,238,228,.3); padding: 10px 18px; font-size: 11px; letter-spacing: .26em; text-transform: uppercase">Sciaccarellu</span>
+          <span style="border: 1px solid rgba(244,238,228,.3); padding: 10px 18px; font-size: 11px; letter-spacing: .26em; text-transform: uppercase">Vermentinu</span>
+        </div>
+        <a href="#carte" class="an-link" style="display: inline-block; margin-top: 36px; font-size: 12px; letter-spacing: .3em; text-transform: uppercase">{{t.wines}}</a>
+      </div>
+      <div class="an-cave-grid" style="flex: 1.2 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+        <div class="an-zoom an-rimg an-row2" style="grid-row: span 2"><img src="assets/cave.jpg" alt="La cave à vins, bouteilles de domaines corses" style="display: block; width: 100%; height: 100%; min-height: 380px; object-fit: cover"></div>
+        <div class="an-zoom an-rimg"><img src="assets/verre-vin.jpg" alt="Verre de vin rouge corse" style="display: block; width: 100%; height: 252px; object-fit: cover"></div>
+        <div class="an-zoom an-rimg"><img src="assets/entree-tonneau.jpg" alt="Le tonneau à l'entrée de la salle" style="display: block; width: 100%; height: 252px; object-fit: cover"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reserver" class="an-sec" style="background-color: #FFFFFF">
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 130px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+      <div class="an-r" style="flex: 1 1 360px; min-width: 0">
+        <p class="an-eb" style="margin: 0 0 24px; font-size: 12px; letter-spacing: .44em; text-transform: uppercase; color: #7A5B33">{{t.rs_eb}}</p>
+        <h2 style="margin: 0; font-weight: 200; font-size: clamp(34px, 4.4vw, 62px); line-height: 1.08; letter-spacing: .06em; text-transform: uppercase">{{t.rs_h_a}} <span style="color: {{accent}}; font-style: italic; font-weight: 300">{{t.rs_h_b}}</span></h2>
+        <p style="margin: 26px 0 0; max-width: 430px; font-size: 16px; font-weight: 300; line-height: 1.8; color: #4A433B">{{t.rs_p}}</p>
+        <p style="margin: 22px 0 0; font-size: 15px; font-weight: 300; color: #4A433B">{{t.groups}} <a href="tel:+33495731985" style="font-weight: 500">04 95 73 19 85</a></p>
+      </div>
+      <form aria-label="Réserver une table" class="an-r" style="flex: 1.2 1 440px; min-width: 0; background-color: #FAF7F2; border: 1px solid #E8E0D2; padding: clamp(24px, 4vw, 44px); box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px">
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #4A433B">{{t.f_date}}
+          <input type="date" style="min-height: 52px; border: 1px solid #CFC4B1; padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 300; color: #1A1714; background-color: #FFFFFF; border-radius: 0">
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #4A433B">{{t.f_service}}
+          <select style="min-height: 52px; border: 1px solid #CFC4B1; padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 300; color: #1A1714; background-color: #FFFFFF; border-radius: 0">
+            <option>{{t.lunch}} · 12h – 14h</option>
+            <option>{{t.dinner}} · 19h – 23h30</option>
+          </select>
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #4A433B">{{t.f_cov}}
+          <select style="min-height: 52px; border: 1px solid #CFC4B1; padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 300; color: #1A1714; background-color: #FFFFFF; border-radius: 0">
+            <option>{{t.p2}}</option>
+            <option>{{t.p1}}</option>
+            <option>{{t.p3}}</option>
+            <option>{{t.p4}}</option>
+            <option>{{t.p5}}</option>
+            <option>{{t.p6}}</option>
+          </select>
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #4A433B">{{t.f_place}}
+          <select style="min-height: 52px; border: 1px solid #CFC4B1; padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 300; color: #1A1714; background-color: #FFFFFF; border-radius: 0">
+            <option>{{t.o_terr}}</option>
+            <option>{{t.o_salle}}</option>
+            <option>{{t.o_any}}</option>
+          </select>
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #4A433B">{{t.f_name}}
+          <input type="text" placeholder="{{t.ph_name}}" style="min-height: 52px; border: 1px solid #CFC4B1; padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 300; color: #1A1714; background-color: #FFFFFF; border-radius: 0">
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #4A433B">{{t.f_tel}}
+          <input type="tel" placeholder="06 00 00 00 00" style="min-height: 52px; border: 1px solid #CFC4B1; padding: 0 14px; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 300; color: #1A1714; background-color: #FFFFFF; border-radius: 0">
+        </label>
+        <button type="button" onClick="{{book}}" class="an-btn" style="grid-column: 1 / -1; min-height: 58px; border: 0; background-color: #1A1714; color: #FAF7F2; font-family: Jost, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase; cursor: pointer">{{bookLabel}}</button>
+      </form>
+    </div>
+  </section>
+
+  </sc-if>
+
+  <footer id="infos" class="an-dark an-footer" style="background-color: #120F0C; color: #F4EEE4">
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 100px 24px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 44px">
+      <div>
+        <img src="assets/logo-or.svg" alt="Aria Nova" style="width: 220px; height: auto">
+        <p style="margin: 22px 0 0; font-size: 14px; font-weight: 300; line-height: 1.7; color: #A99F90">{{t.foot_desc}}</p>
+      </div>
+      <div>
+        <p style="margin: 0 0 16px; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #E7CFA6">{{t.addr_l}}</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9">4 rue Fred Scamaroni<br>20169 Bonifacio</p>
+        <a class="an-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.3875453%2C9.157987" style="display: inline-block; margin-top: 14px; font-size: 11px; letter-spacing: .3em; text-transform: uppercase">{{t.itin}}</a>
+      </div>
+      <div>
+        <p style="margin: 0 0 16px; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #E7CFA6">{{t.hours_l}}</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9">{{t.lunch}} · 12h – 14h<br>{{t.dinner}} · 19h – 23h30<br>{{t.closed}}</p>
+      </div>
+      <div>
+        <p style="margin: 0 0 16px; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #E7CFA6">Contact</p>
+        <p style="margin: 0; font-size: 15px; font-weight: 300; line-height: 1.9"><a href="tel:+33495731985">04 95 73 19 85</a><br><a href="mailto:arianova2013@gmail.com">arianova2013@gmail.com</a></p>
+        <div style="display: flex; gap: 12px; margin-top: 16px">
+          <a href="https://www.instagram.com/arianovabonifacio/" aria-label="Instagram" style="width: 44px; height: 44px; border: 1px solid rgba(244,238,228,.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6"></circle></svg></a>
+          <a href="https://www.facebook.com/arianova.bonifacio/" aria-label="Facebook" style="width: 44px; height: 44px; border: 1px solid rgba(244,238,228,.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 24px 24px 34px; border-top: 1px solid rgba(244,238,228,.12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; font-weight: 300; letter-spacing: .08em; color: #A99F90">
+      <span>© 2026 Aria Nova · Bonifacio</span>
+      <span><a href="#top">{{t.legal}}</a> · <a href="#top">{{t.privacy}}</a></span>
+      <span>{{t.credit}} : Kobalt Studio</span>
+    </div>
+  </footer>
+
+  <div class="an-mobilebar" style="display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; gap: 8px; box-shadow: 0 18px 40px -16px rgba(0,0,0,.6)">
+    <a href="tel:+33495731985" style="flex: 1; text-decoration: none; background-color: #1A1714; color: #F4EEE4; min-height: 54px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>{{t.call}}</a>
+    <a href="#reserver" onClick="{{goReserve}}" style="flex: 1.4; text-decoration: none; background-color: #C5B9A2; color: #1A1714; min-height: 54px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase">{{t.reserve}}</a>
+  </div>
+
+</div>
+</template>
+<noscript>Activez JavaScript pour afficher le site Aria Nova.</noscript>
+<script src="runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'entrees', lang: 'FR', booked: false, menu: false, page: 'home' };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#B08446';
+    const L = this.state.lang;
+    const pick3 = (fr, en, it) => (L === 'EN' ? en : L === 'IT' ? it : fr);
+    const T = {
+      FR: {
+        nav_maison: 'La maison', nav_carte: 'La carte', nav_equipe: 'L’équipe', nav_prod: 'Producteurs', nav_cave: 'La cave',
+        reserve: 'Réserver', reserve_table: 'Réserver une table', discover: 'Découvrir la carte',
+        hero_kicker: 'Bonifacio · Haute ville · Depuis 2013',
+        hero_sub: 'Restaurant gastronomique corse. Le potager, la mer, les éleveurs de l’île, et tout le reste fait maison.',
+        scroll: 'Défiler', open_l: 'Ouvert', open_v: 'Tous les jours, sauf samedi midi', season_l: 'Saison', season_v: 'Avril → début novembre', addr_l: 'Adresse',
+        gm: 'Gault&Millau 2026 · Sélectionné', nustrale: 'Ambassadeur Nustrale Bonifacio',
+        m_h_a: 'Pierre de Bonifacio, bois d’olivier, et une cuisine qui', m_h_b: 'raconte l’île',
+        m_p: 'Une salle élégante en pierres, de belles tables en bois d’olivier, une terrasse à ciel ouvert. Un décor sobre et chic, jamais guindé. En salle, Patrick veille sur chaque table.',
+        cap_salle: 'La salle voûtée', cap_tables: 'Tables en olivier', cap_maison: 'Tout fait maison', cap_midi: 'Midi & soir',
+        st1: 'Ouverture en haute ville, près de l’office de tourisme.', st2: 'Fait maison, en circuits courts, au fil des saisons.', st3_sup: 'er', st3: 'Premier client du Potager en Herbes, jardin en permaculture.', st4: 'Guides et réseaux qui recommandent la maison.',
+        pl_eb: 'Les assiettes', pl_h_a: 'L’île,', pl_h_b: 'à la fourchette', swipe: 'Faites défiler →',
+        c_h_a: 'Terre, mer', c_h_b: '& jardin',
+        midi_l: 'Le midi', midi_t: 'Menu du jour', midi_d: 'Entrée, plat, dessert. [PRIX DU MENU]',
+        jour_l: 'Chaque jour', jour_t: 'Suggestions du chef', jour_d: 'Selon la pêche et les arrivages. Options végétariennes et sans gluten.',
+        extrait: 'Extrait de la carte 2026. La carte évolue au fil des saisons.',
+        quote: '« Ici, tout est fait maison. »',
+        eq_eb: 'Le chef & l’équipe', eq_h_a: 'Des parcours de grandes maisons,', eq_h_b: 'au service de la Corse',
+        r_chef: 'Chef de cuisine', b_chef: 'Passé par le Fouquet’s et le Palais Maeterlinck. Une cuisine créative et saisonnière, nourrie par les producteurs de l’île.',
+        r_pat: 'Cheffe pâtissière', b_pat: 'Ancienne de chez Piège, du Lucas Carton et du Ledoyen. Des desserts qui marient sucré et salé avec finesse.',
+        r_host: 'L’hôte', b_host: 'Le propriétaire, aux petits soins en salle. Ses aubergines à la bonifacienne sont la signature de la maison.',
+        pr_eb: 'Nos producteurs', pr_h_a: 'Le circuit court,', pr_h_b: 'bien avant la mode',
+        pr_p: 'Ambassadeur du réseau Produit Local « Nustrale » de Bonifacio, Aria Nova travaille main dans la main avec les éleveurs, pêcheurs et maraîchers de l’île.',
+        cv_h_a: 'Une cave régionale', cv_h_b: 'bien pourvue',
+        cv_p: 'Rouges de caractère, blancs frais, rosés délicats et bulles pour les grandes occasions : la sélection fait la part belle aux domaines de l’île. En salle, l’équipe vous guide vers l’accord juste.',
+        wines: 'Carte des vins →',
+        rs_eb: 'Réservation', rs_h_a: 'Votre table', rs_h_b: 'vous attend',
+        rs_p: 'Réservation conseillée toute la saison, indispensable en juillet et août. Confirmation immédiate.',
+        groups: 'Groupes et privatisations :',
+        f_date: 'Date', f_service: 'Service', f_cov: 'Couverts', f_place: 'Placement', f_name: 'Nom', f_tel: 'Téléphone',
+        lunch: 'Déjeuner', dinner: 'Dîner', p1: '1 personne', p2: '2 personnes', p3: '3 personnes', p4: '4 personnes', p5: '5 personnes', p6: '6 personnes et plus',
+        o_terr: 'Terrasse', o_salle: 'Salle', o_any: 'Sans préférence', ph_name: 'Votre nom',
+        book: 'Réserver ma table', booked: 'Demande envoyée ✓',
+        foot_desc: 'Restaurant gastronomique corse, haute ville de Bonifacio.', itin: 'Itinéraire →', hours_l: 'Horaires', closed: 'Fermé le samedi midi',
+        more: 'À découvrir aussi', legal: 'Mentions légales', privacy: 'Confidentialité', credit: 'Conception', call: 'Appeler'
+      },
+      EN: {
+        nav_maison: 'The house', nav_carte: 'The menu', nav_equipe: 'The team', nav_prod: 'Producers', nav_cave: 'The cellar',
+        reserve: 'Book', reserve_table: 'Book a table', discover: 'Discover the menu',
+        hero_kicker: 'Bonifacio · Old town · Since 2013',
+        hero_sub: 'Corsican fine dining. The garden, the sea, the island’s farmers, and everything else made in-house.',
+        scroll: 'Scroll', open_l: 'Open', open_v: 'Every day, except Saturday lunch', season_l: 'Season', season_v: 'April → early November', addr_l: 'Address',
+        gm: 'Gault&Millau 2026 · Selected', nustrale: 'Nustrale Bonifacio ambassador',
+        m_h_a: 'Bonifacio stone, olive wood, and a cuisine that', m_h_b: 'tells the island’s story',
+        m_p: 'An elegant stone dining room, beautiful olive-wood tables, an open-air terrace. Understated and chic, never stuffy. In the dining room, Patrick looks after every table.',
+        cap_salle: 'The vaulted room', cap_tables: 'Olive-wood tables', cap_maison: 'All homemade', cap_midi: 'Lunch & dinner',
+        st1: 'Opened in the old town, next to the tourist office.', st2: 'Homemade, from short supply chains, with the seasons.', st3_sup: 'st', st3: 'First customer of the Potager en Herbes permaculture garden.', st4: 'Guides and networks recommending the house.',
+        pl_eb: 'The plates', pl_h_a: 'The island,', pl_h_b: 'on your fork', swipe: 'Swipe →',
+        c_h_a: 'Land, sea', c_h_b: '& garden',
+        midi_l: 'Lunchtime', midi_t: 'Menu of the day', midi_d: 'Starter, main, dessert. [MENU PRICE]',
+        jour_l: 'Every day', jour_t: 'Chef’s suggestions', jour_d: 'Depending on the catch and deliveries. Vegetarian and gluten-free options.',
+        extrait: 'Excerpt from the 2026 menu. The menu changes with the seasons.',
+        quote: '“Here, everything is homemade.”',
+        eq_eb: 'The chef & the team', eq_h_a: 'Trained in great houses,', eq_h_b: 'devoted to Corsica',
+        r_chef: 'Head chef', b_chef: 'Formerly at Fouquet’s and the Palais Maeterlinck. Creative, seasonal cooking, inspired by the island’s producers.',
+        r_pat: 'Pastry chef', b_pat: 'Formerly at Piège, Lucas Carton and Ledoyen. Desserts that blend sweet and savoury with finesse.',
+        r_host: 'The host', b_host: 'The owner, attentive to every guest. His Bonifacio-style aubergines are the house signature.',
+        pr_eb: 'Our producers', pr_h_a: 'Short supply chains,', pr_h_b: 'long before it was trendy',
+        pr_p: 'An ambassador of Bonifacio’s “Nustrale” local produce network, Aria Nova works hand in hand with the island’s farmers, fishermen and growers.',
+        cv_h_a: 'A well-stocked', cv_h_b: 'regional cellar',
+        cv_p: 'Bold reds, fresh whites, delicate rosés and sparkling wines for special occasions: the selection showcases the island’s estates. Our team will guide you to the perfect pairing.',
+        wines: 'Wine list →',
+        rs_eb: 'Reservations', rs_h_a: 'Your table', rs_h_b: 'awaits',
+        rs_p: 'Booking recommended all season, essential in July and August. Instant confirmation.',
+        groups: 'Groups and private events:',
+        f_date: 'Date', f_service: 'Service', f_cov: 'Guests', f_place: 'Seating', f_name: 'Name', f_tel: 'Phone',
+        lunch: 'Lunch', dinner: 'Dinner', p1: '1 guest', p2: '2 guests', p3: '3 guests', p4: '4 guests', p5: '5 guests', p6: '6 guests or more',
+        o_terr: 'Terrace', o_salle: 'Dining room', o_any: 'No preference', ph_name: 'Your name',
+        book: 'Book my table', booked: 'Request sent ✓',
+        foot_desc: 'Corsican fine dining in Bonifacio’s old town.', itin: 'Directions →', hours_l: 'Opening hours', closed: 'Closed Saturday lunch',
+        more: 'Discover more', legal: 'Legal notice', privacy: 'Privacy', credit: 'Design', call: 'Call'
+      },
+      IT: {
+        nav_maison: 'La casa', nav_carte: 'Il menù', nav_equipe: 'La squadra', nav_prod: 'Produttori', nav_cave: 'La cantina',
+        reserve: 'Prenota', reserve_table: 'Prenota un tavolo', discover: 'Scopri il menù',
+        hero_kicker: 'Bonifacio · Città alta · Dal 2013',
+        hero_sub: 'Ristorante gastronomico corso. L’orto, il mare, gli allevatori dell’isola, e tutto il resto fatto in casa.',
+        scroll: 'Scorri', open_l: 'Aperto', open_v: 'Tutti i giorni, tranne sabato a pranzo', season_l: 'Stagione', season_v: 'Aprile → inizio novembre', addr_l: 'Indirizzo',
+        gm: 'Gault&Millau 2026 · Selezionato', nustrale: 'Ambasciatore Nustrale Bonifacio',
+        m_h_a: 'Pietra di Bonifacio, legno d’ulivo, e una cucina che', m_h_b: 'racconta l’isola',
+        m_p: 'Un’elegante sala in pietra, bei tavoli in legno d’ulivo, una terrazza all’aperto. Un ambiente sobrio e chic, mai formale. In sala, Patrick si prende cura di ogni tavolo.',
+        cap_salle: 'La sala a volta', cap_tables: 'Tavoli in ulivo', cap_maison: 'Tutto fatto in casa', cap_midi: 'Pranzo & cena',
+        st1: 'Apertura nella città alta, vicino all’ufficio del turismo.', st2: 'Fatto in casa, a filiera corta, seguendo le stagioni.', st3_sup: 'o', st3: 'Primo cliente del Potager en Herbes, orto in permacultura.', st4: 'Guide e reti che raccomandano la casa.',
+        pl_eb: 'I piatti', pl_h_a: 'L’isola,', pl_h_b: 'nel piatto', swipe: 'Scorri →',
+        c_h_a: 'Terra, mare', c_h_b: '& orto',
+        midi_l: 'A pranzo', midi_t: 'Menù del giorno', midi_d: 'Antipasto, piatto, dessert. [PREZZO DEL MENÙ]',
+        jour_l: 'Ogni giorno', jour_t: 'Suggerimenti dello chef', jour_d: 'Secondo il pescato e gli arrivi. Opzioni vegetariane e senza glutine.',
+        extrait: 'Estratto del menù 2026. Il menù cambia con le stagioni.',
+        quote: '« Qui, tutto è fatto in casa. »',
+        eq_eb: 'Lo chef & la squadra', eq_h_a: 'Percorsi nelle grandi case,', eq_h_b: 'al servizio della Corsica',
+        r_chef: 'Chef di cucina', b_chef: 'Ha lavorato al Fouquet’s e al Palais Maeterlinck. Una cucina creativa e stagionale, nutrita dai produttori dell’isola.',
+        r_pat: 'Chef pasticcera', b_pat: 'Già da Piège, Lucas Carton e Ledoyen. Dessert che uniscono dolce e salato con finezza.',
+        r_host: 'Il padrone di casa', b_host: 'Il proprietario, attento a ogni ospite. Le sue melanzane alla bonifacina sono la firma della casa.',
+        pr_eb: 'I nostri produttori', pr_h_a: 'La filiera corta,', pr_h_b: 'prima che fosse di moda',
+        pr_p: 'Ambasciatore della rete Produit Local « Nustrale » di Bonifacio, Aria Nova lavora fianco a fianco con allevatori, pescatori e orticoltori dell’isola.',
+        cv_h_a: 'Una cantina regionale', cv_h_b: 'ben fornita',
+        cv_p: 'Rossi di carattere, bianchi freschi, rosati delicati e bollicine per le grandi occasioni: la selezione valorizza le tenute dell’isola. In sala, la squadra vi guida verso l’abbinamento giusto.',
+        wines: 'Carta dei vini →',
+        rs_eb: 'Prenotazione', rs_h_a: 'Il vostro tavolo', rs_h_b: 'vi aspetta',
+        rs_p: 'Prenotazione consigliata per tutta la stagione, indispensabile a luglio e agosto. Conferma immediata.',
+        groups: 'Gruppi ed eventi privati:',
+        f_date: 'Data', f_service: 'Servizio', f_cov: 'Coperti', f_place: 'Posto', f_name: 'Nome', f_tel: 'Telefono',
+        lunch: 'Pranzo', dinner: 'Cena', p1: '1 persona', p2: '2 persone', p3: '3 persone', p4: '4 persone', p5: '5 persone', p6: '6 persone o più',
+        o_terr: 'Terrazza', o_salle: 'Sala', o_any: 'Nessuna preferenza', ph_name: 'Il vostro nome',
+        book: 'Prenota il mio tavolo', booked: 'Richiesta inviata ✓',
+        foot_desc: 'Ristorante gastronomico corso, città alta di Bonifacio.', itin: 'Indicazioni →', hours_l: 'Orari', closed: 'Chiuso sabato a pranzo',
+        more: 'Scopri anche', legal: 'Note legali', privacy: 'Privacy', credit: 'Design', call: 'Chiama'
+      }
+    };
+    const t = T[L];
+    const IMG = {
+      aubergines: 'assets/aubergines.jpg',
+      fleurs: 'assets/plat-fleurs.jpg',
+      meringue: 'assets/dessert-meringue.jpg',
+      poire: 'assets/dessert-poire.jpg',
+      tablePlat: 'assets/table-plat.jpg',
+      tableChefs: 'assets/table-chefs.jpg',
+      cave: 'assets/cave.jpg',
+      moelleux: 'assets/moelleux-chataigne.jpg',
+      herbes: 'assets/herbes.jpg'
+    };
+    const per100 = pick3(' / 100 g', ' / 100 g', ' / 100 g');
+    const D = (fr, en, it, price, img) => ({ fr, en, it, price, img: img || '' });
+    const menu = {
+      entrees: {
+        label: pick3('Entrées', 'Starters', 'Antipasti'), img: IMG.aubergines,
+        alt: pick3('Aubergines à la bonifacienne façon Patrick', 'Bonifacio-style aubergines, Patrick’s recipe', 'Melanzane alla bonifacina di Patrick'),
+        intro: pick3('Les classiques bonifaciens et la pêche locale, travaillés au plus près de la saison.', 'Bonifacio classics and the local catch, cooked as close to the season as possible.', 'I classici di Bonifacio e il pescato locale, lavorati seguendo la stagione.'),
+        dishes: [
+          D('Aubergines à la bonifacienne façon « Patrick »', 'Bonifacio-style aubergines, Patrick’s recipe', 'Melanzane alla bonifacina, ricetta di Patrick', '25 €', IMG.aubergines),
+          D('Foie gras de canard mi-cuit à la liqueur de myrte', 'Semi-cooked duck foie gras with myrtle liqueur', 'Foie gras d’anatra semicotto al liquore di mirto', '30 €'),
+          D('Gravelax de veau corse, herbes du maquis, burrata de bufflonne, pesto de roquette et son œuf confit au soja vinaigré', 'Corsican veal gravlax, maquis herbs, buffalo burrata, rocket pesto and egg confit in vinegared soy', 'Gravlax di vitello corso, erbe della macchia, burrata di bufala, pesto di rucola e uovo confit alla soia acetata', '29 €'),
+          D('Soupe de poissons de roche, croûtons et rouille', 'Rockfish soup with croutons and rouille', 'Zuppa di pesce di scoglio con crostini e rouille', '28 €'),
+          D('Couteaux poêlés au beurre aillé (selon arrivage)', 'Pan-fried razor clams with garlic butter (subject to availability)', 'Cannolicchi in padella al burro all’aglio (secondo disponibilità)', '25 €'),
+          D('Crudo de pêche locale, huile verte de nepita, fraises et fruits de la passion, zestes d’agrumes', 'Local catch crudo, nepita green oil, strawberries and passion fruit, citrus zest', 'Crudo di pescato locale, olio verde di nepitella, fragole e frutto della passione, scorza di agrumi', '27 €'),
+          D('Huîtres de Diana gratinées au muscat du Cap Corse, perles noires', 'Diana oysters gratinated with Cap Corse muscat, black pearls', 'Ostriche di Diana gratinate al moscato di Capo Corso, perle nere', '25 €')
+        ]
+      },
+      terroir: {
+        label: pick3('Terroir', 'Local produce', 'Territorio'), img: IMG.tableChefs,
+        alt: pick3('Table dressée sur bois d’olivier', 'Table set on olive wood', 'Tavola apparecchiata su legno d’ulivo'),
+        intro: pick3('La charcuterie AOP de Loreto di Casinca et les fromages de l’île, à partager.', 'PDO charcuterie from Loreto di Casinca and the island’s cheeses, to share.', 'I salumi DOP di Loreto di Casinca e i formaggi dell’isola, da condividere.'),
+        dishes: [
+          D('Notre jambon corse AOP', 'Our PDO Corsican ham', 'Il nostro prosciutto corso DOP', '28 €'),
+          D('Notre sélection de fromages corses', 'Our selection of Corsican cheeses', 'La nostra selezione di formaggi corsi', '24 €'),
+          D('Notre plateau du terroir', 'Our local produce platter', 'Il nostro tagliere del territorio', '42 €'),
+          D('Pata Negra', 'Pata Negra', 'Pata Negra', '28 €')
+        ]
+      },
+      terre: {
+        label: pick3('Côté terre', 'From the land', 'Dalla terra'), img: IMG.fleurs,
+        alt: pick3('Plat du chef aux fleurs comestibles', 'Chef’s dish with edible flowers', 'Piatto dello chef con fiori eduli'),
+        intro: pick3('Gibier, agneau et viandes d’exception, cuisinés lentement.', 'Game, lamb and exceptional meats, slowly cooked.', 'Selvaggina, agnello e carni d’eccezione, cotti lentamente.'),
+        dishes: [
+          D('Plat vegan', 'Vegan dish', 'Piatto vegano', '28 €'),
+          D('Civet de sanglier, recette de ma grand-mère', 'Wild boar stew, my grandmother’s recipe', 'Spezzatino di cinghiale, ricetta della nonna', '29 €'),
+          D('Gnocchis maison à la crème truffée, cœurs d’artichauts poêlés', 'Homemade gnocchi with truffle cream, pan-fried artichoke hearts', 'Gnocchi fatti in casa alla crema di tartufo, cuori di carciofo in padella', '30 €'),
+          D('Souris d’agneau confite 8 h au miel corse', 'Lamb shank slow-cooked for 8 hours with Corsican honey', 'Stinco d’agnello confit 8 ore al miele corso', '44 €'),
+          D('Cœur de rumsteck wagyu façon Rossini, foie gras poêlé et sauce truffe, cromesquis de pomme de terre', 'Wagyu rump heart Rossini-style, pan-fried foie gras and truffle sauce, potato cromesquis', 'Cuore di scamone wagyu alla Rossini, foie gras in padella e salsa al tartufo, cromesquis di patate', '55 €')
+        ]
+      },
+      mer: {
+        label: pick3('Notre voisine la mer', 'From the sea', 'Il nostro vicino, il mare'), img: IMG.tablePlat,
+        alt: pick3('Service à table sur bois d’olivier', 'Table service on olive wood', 'Servizio al tavolo su legno d’ulivo'),
+        intro: pick3('La pêche du jour et la langouste royale de Bonifacio, au poids.', 'The catch of the day and Bonifacio spiny lobster, priced by weight.', 'Il pescato del giorno e l’aragosta reale di Bonifacio, a peso.'),
+        dishes: [
+          D('Tagliolini à l’encre de seiche aux grosses palourdes', 'Squid ink tagliolini with large clams', 'Tagliolini al nero di seppia con vongole grosse', '32 €'),
+          D('Filet de poisson du jour, sauce beurre blanc', 'Fish of the day fillet, beurre blanc sauce', 'Filetto di pesce del giorno, salsa al burro bianco', '37 €'),
+          D('Grosses gambas poêlées au gingembre confit', 'Pan-fried king prawns with candied ginger', 'Gamberoni in padella allo zenzero candito', '38 €'),
+          D('Tentacule de poulpe braisé', 'Braised octopus tentacle', 'Tentacolo di polpo brasato', '39 €'),
+          D('Pâtes à la langouste royale de Bonifacio', 'Pasta with Bonifacio spiny lobster', 'Pasta all’aragosta reale di Bonifacio', '24 €' + per100),
+          D('Langouste royale de Bonifacio, grillée ou pochée', 'Bonifacio spiny lobster, grilled or poached', 'Aragosta reale di Bonifacio, alla griglia o in camicia', '24 €' + per100)
+        ]
+      },
+      desserts: {
+        label: 'Desserts', img: IMG.meringue,
+        alt: pick3('Dessert meringue et fleur de capucine', 'Meringue dessert with nasturtium petal', 'Dessert di meringa e fiore di nasturzio'),
+        intro: pick3('Signés Karine Broussier : la tradition corse revue par la grande pâtisserie.', 'By Karine Broussier: Corsican tradition reimagined by haute pâtisserie.', 'Firmati Karine Broussier: la tradizione corsa rivista dalla grande pasticceria.'),
+        dishes: [
+          D('Souvenir d’enfance à la châtaigne et sa glace maison au brocciu', 'Childhood memory: chestnut, homemade brocciu ice cream', 'Ricordo d’infanzia alla castagna e gelato al brocciu fatto in casa', '14 €'),
+          D('Suprême pistache et fraises', 'Pistachio and strawberry suprême', 'Suprême pistacchio e fragole', '16 €'),
+          D('Brioche façon pain perdu', 'Brioche French toast', 'Brioche in stile pain perdu', '14 €'),
+          D('Fiadone de ma grand-mère', 'My grandmother’s fiadone', 'Il fiadone della nonna', '14 €'),
+          D('Tiramisu à la châtaigne et canistrelli', 'Chestnut and canistrelli tiramisu', 'Tiramisù alla castagna e canistrelli', '14 €'),
+          D('Sélection de fromages corses', 'Selection of Corsican cheeses', 'Selezione di formaggi corsi', '24 €'),
+          D('Sélection de nos glaces maison', 'Our homemade ice creams', 'I nostri gelati fatti in casa', pick3('5 € la boule', '5 € per scoop', '5 € a pallina'))
+        ]
+      },
+      suggestions: {
+        label: pick3('Suggestions du jour', 'Today’s specials', 'Suggerimenti del giorno'), img: IMG.moelleux,
+        alt: pick3('Moelleux à la châtaigne et glace maison', 'Chestnut fondant with homemade ice cream', 'Tortino alla castagna con gelato fatto in casa'),
+        intro: pick3('Selon le marché et la pêche du jour. Entrées, plats et desserts du moment.', 'Depending on the market and the day’s catch. Seasonal starters, mains and desserts.', 'Secondo il mercato e il pescato del giorno. Antipasti, piatti e dessert del momento.'),
+        dishes: [
+          D('Anchois à la bonifacienne', 'Bonifacio-style anchovies', 'Acciughe alla bonifacina', '12 €'),
+          D('Feuilleté chèvre-figues', 'Goat cheese and fig puff pastry', 'Sfoglia di caprino e fichi', '12 €'),
+          D('Civet de sanglier', 'Wild boar stew', 'Spezzatino di cinghiale', '29 €'),
+          D('Seiche à la bonifacienne', 'Bonifacio-style cuttlefish', 'Seppia alla bonifacina', '29 €'),
+          D('Moelleux à la châtaigne', 'Chestnut fondant', 'Tortino alla castagna', '11 €', IMG.moelleux),
+          D('Panna cotta au citron corse', 'Corsican lemon panna cotta', 'Panna cotta al limone corso', '11 €')
+        ]
+      },
+      vins: {
+        label: pick3('Carte des vins', 'Wine list', 'Carta dei vini'), img: IMG.cave,
+        alt: pick3('La cave à vins corses', 'The Corsican wine cellar', 'La cantina di vini corsi'),
+        intro: pick3('Une cave 100 % corse, de Patrimonio à Bonifacio. Prix à la bouteille.', 'A 100% Corsican cellar, from Patrimonio to Bonifacio. Prices per bottle.', 'Una cantina 100% corsa, da Patrimonio a Bonifacio. Prezzi a bottiglia.'),
+        dishes: []
+      }
+    };
+    const W = (n, r, b, s) => ({ n, r: r || '—', b: b || '—', s: s || '—' });
+    const wineGroups = [
+      { title: 'AOP Patrimonio', rows: [W('Teddi « Grande Cuvée »', '58 €', '58 €', '45 €'), W('Montemagni « Cuvée Andria »', '77 €'), W('Giudicelli', '69 €'), W('Montemagni « Cuvée Menhir » 50 cl', '33 €', '33 €', '29 €'), W('Montemagni « Cuvée Menhir » 75 cl', '43 €', '43 €', '38 €'), W('Yves Leccia « Cuvée YL »', '', '47 €'), W('Yves Leccia « Bianco Marina »', '', '59 €'), W('Giacometti « Sempre Cuntentu »', '51 €'), W('Giudicelli « Blanc de Noirs »', '', '82 €'), W('Giudicelli « Terra Rossa »', '88 €')] },
+      { title: 'AOP Sartène', rows: [W('Fiumicicoli 50 cl', '25 €', '25 €', '24 €'), W('Fiumicicoli 75 cl', '34 €', '34 €', '33 €'), W('Fiumicicoli « Cuvée Sciaccarellu »', '45 €'), W('Sant’Armettu « Cuvée Myrtus »', '66 €', '68 €', '52 €'), W('Fiumicicoli « Cuvée Vassilia »', '', '', '42 €')] },
+      { title: 'AOP Bonifacio · Figari · Porto-Vecchio', rows: [W('DZ « Cuvée Aria »', '33 €', '33 €', '28 €'), W('DZ « Cuvée Spinella »', '105 €'), W('DZ « Initiale »', '', '72 €', '49 €'), W('Buzzo « Cuvée Ciafara »', '52 €'), W('Tarra di Sognu', '96 €', '95 €'), W('Buzzo « Cian di Fossi »', '66 €'), W('Buzzo « Rocca Gianca »', '', '43 €'), W('Petra Bianca Riminese « Pavonia »', '', '52 €'), W('Buzzo « Cuvée Biginti »', '', '58 €'), W('Tanella « Suarte »', '75 €')] },
+      { title: 'AOP Corse · Centre Corse · Cap Corse', rows: [W('CC « Cuvée des Pierres »', '32 €', '34 €', '32 €'), W('Clos Paoli', '', '42 €'), W('Fornelli « Robe d’ange »', '34 €', '34 €'), W('Marquiliani « Rosé gris de Pauline »', '', '', '38 €')] },
+      { title: 'AOP Ajaccio', rows: [W('Guillaume de Pratavone', '', '45 €'), W('Termica « Cuvée Dolia Rossa »', '64 €'), W('Château P.P. Napoléon « Argentella »', '', '49 €'), W('Château P.P. Napoléon « Bleu Impérial »', '69 €')] }
+    ];
+    const order = ['entrees', 'terroir', 'terre', 'mer', 'desserts', 'suggestions', 'vins'];
+    const cur = menu[this.state.tab] || menu.entrees;
+    const isWine = this.state.tab === 'vins';
+    const dishes = cur.dishes.map((d, i) => {
+      const main = L === 'EN' ? d.en : L === 'IT' ? d.it : d.fr;
+      const sub = L === 'FR' ? d.en : d.fr;
+      return { num: String(i + 1).padStart(2, '0'), name: main, sub, price: d.price, img: d.img, hasImg: !!d.img, noImg: !d.img, alt: main };
+    });
+    const tabs = order.map((id) => {
+      const on = id === this.state.tab;
+      return {
+        label: menu[id].label,
+        selected: on ? 'true' : 'false',
+        pick: () => this.setState({ tab: id }),
+        style: 'min-height: 44px; padding: 0 18px; cursor: pointer; font-family: Jost, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; border-radius: 0; ' + (on ? 'background-color: #1A1714; color: #FAF7F2; border: 1px solid #1A1714;' : 'background-color: transparent; color: #1A1714; border: 1px solid #CFC4B1;')
+      };
+    });
+    const wineHead = { r: pick3('Rouge', 'Red', 'Rosso'), b: pick3('Blanc', 'White', 'Bianco'), s: pick3('Rosé', 'Rosé', 'Rosato') };
+    const PG = {
+      cave: {
+        kicker: 'La cave', title: 'La cave à vin gastronomique', img: 'assets/cave.jpg',
+        lead: 'L’art de sublimer les saveurs de Corse-du-Sud.',
+        sections: [
+          { h: 'La cave à vin gastronomique d’Aria Nova', img: 'assets/vin-service.jpg', ps: [
+            `Découvrez notre cave à vin gastronomique à Bonifacio, en Corse du Sud, qui ravira les amateurs de bons vins et de gastronomie. Chez Aria Nova, nous avons une passion pour les produits locaux de qualité et le vin ne fait pas exception. Notre cave est soigneusement sélectionnée pour offrir une variété de vins de Corse, de France et du monde entier, tous choisis pour leur qualité et leur accord parfait avec notre cuisine. Notre sommelier expérimenté est à votre disposition pour vous guider dans vos choix et vous conseiller sur les accords mets et vins les plus adaptés à vos goûts et à votre menu.`,
+            `Profitez de notre ambiance chaleureuse et décontractée pour déguster un verre de vin avec des amis, l’esprit festif est toujours au rendez-vous, ou participez à l’un de nos événements de dégustation de vin pour découvrir de nouveaux crus et rencontrer des amateurs de vin passionnés. Chez Aria Nova, nous sommes fiers de notre cave à vin gastronomique, qui complète parfaitement notre cuisine réalisée avec cœur pour une expérience culinaire subtile en Corse du Sud.`
+          ] },
+          { h: 'Notre sélection de vins de qualité', ps: [
+            `La cave à vin gastronomique d’Aria Nova est une véritable institution à Bonifacio, en Corse du Sud. Elle est le fruit de la passion de notre équipe pour les vins corses et les produits locaux. Dans cette carte, nous avons sélectionné les meilleurs crus de la région, ainsi que des meilleurs crus continentaux : Vosne-Romanée, Puligny-Montrachet, soigneusement répertoriés pour leur vertu et leur complémentarité avec notre cuisine gastronomique. Que vous soyez un connaisseur en la matière ou simplement un amateur, notre équipe de sommeliers se fera un plaisir de vous guider dans votre choix et de vous faire découvrir des pépites rares et savoureuses.`,
+            `Mais Aria Nova, c’est aussi l’histoire de Bonifacio. Cette ville chargée de légendes et de culture, située sur une falaise surplombant la mer, est le lieu de rencontre de plusieurs cultures méditerranéennes. Depuis des siècles, Bonifacio est un port important pour le commerce de vin, notamment grâce à sa position privilégiée au cœur de la route maritime du commerce de la Méditerranée. En nous appuyant sur cette tradition, nous avons créé une carte des vins gastronomique qui célèbre les vins de Corse, mais aussi de la Méditerranée.`
+          ] },
+          { h: 'Une carte élaborée par le meilleur sommelier de France 2021', img: 'assets/verre-vin.jpg', ps: [
+            `Nous nous réjouissons de vous proposer une sélection de vins locaux qui n’ont rien à envier aux autres grands crus du monde entier, ces derniers ayant été élaborés avec passion et dans le respect de la tradition viticole corse. Nous sommes convaincus que cette carte des vins est le reflet de notre amour pour Bonifacio et de notre désir de vous faire découvrir les richesses de notre terroir.`,
+            `Notre carte des vins est élaborée avec justesse et passion par le meilleur sommelier de France 2021, Florent Martin, pour le plus grand bonheur de nos clients. Avec les différentes AOP de Corse et leurs cépages (vermentinu, minustellu, sciaccarellu, aleaticu, syrah, carcaghjolu neru), il nous invite à déguster les meilleurs crus de l’île, sélectionnés pour leur diversité et leur complexité, afin de les accorder au mieux à la cuisine originale et savoureuse de notre chef Sébastien Caudron et de son équipe. En plus de cette sélection, Florent a également choisi pour nous des « pépites » de vins continentaux.`,
+            `Venez découvrir notre restaurant gastronomique accompagné de notre étonnante carte des vins, à Bonifacio, pour une expérience culinaire et œnologique qui ne vous laissera pas insensible.`
+          ] },
+          { h: 'Les meilleurs vins pour accompagner votre dîner', ps: [
+            `La Corse est une région renommée pour ses vins d’exception et sa gastronomie raffinée. Les vins corses sont produits dans des terroirs exceptionnels tels que ceux d’Ajaccio, Porto-Vecchio, Calvi, Figari et Patrimonio, qui offrent des conditions de culture optimales pour les cépages tels que le vermentinu, le sciaccarellu et le niellucciu.`,
+            `Les vins corses sont souvent associés aux plats traditionnels de la région, tels que le figatellu, la charcuterie, les fromages et les poissons locaux. Des sommeliers passionnés vous guideront à travers les saveurs uniques et les arômes complexes de ces vins, pour accompagner au mieux votre repas. Réservez votre table et laissez-vous séduire par la magie des vins corses et de la gastronomie locale.`
+          ] },
+          { h: 'Trouvez le vin corse parfait pour sublimer votre repas', ps: [
+            `Le choix d’un bon vin peut avoir un impact significatif sur l’expérience culinaire globale d’un repas. En Corse, la région viticole offre une grande variété de vins pour accompagner les plats locaux. Les vins corses, tels que le vermentinu, le sciaccarellu et le niellucciu, sont cultivés dans des terroirs uniques et offrent une large gamme de saveurs complexes. Ils sont particulièrement bien adaptés pour accompagner la charcuterie, les fromages, les poissons et les fruits de mer locaux.`,
+            `Dans notre restaurant, nous proposons une sélection de vins corses soigneusement choisis pour compléter notre menu. Nous pensons, avec la sincérité qui nous caractérise, que la combinaison d’un bon vin et d’un bon repas peut transformer une soirée ordinaire en une expérience gastronomique mémorable. Venez nous rendre visite et découvrez par vous-même les saveurs uniques des vins corses et de la cuisine locale.`
+          ] }
+        ]
+      },
+      resto: {
+        kicker: 'Le restaurant', title: 'Un restaurant incontournable en Corse-du-Sud', img: 'assets/entree-salle.jpg',
+        lead: 'Pour les amateurs de cuisine locale, au cœur de la haute ville de Bonifacio.',
+        sections: [
+          { h: 'Une expérience culinaire unique en son genre', img: 'assets/facade.jpg', ps: [
+            `La Corse est une région qui regorge de richesses gastronomiques. Si vous êtes un amateur de cuisine locale, vous ne pourrez pas passer à côté d’un restaurant incontournable en Corse du Sud : l’Aria Nova. Situé dans la haute ville de Bonifacio, ce restaurant vous invite à une expérience culinaire unique en son genre. Tout est fait maison, à partir d’une excellente sélection de produits locaux en circuits courts et d’un jardin en permaculture.`,
+            `Le chef de l’Aria Nova, Sébastien Caudron, vous propose une carte gourmande et des suggestions du jour intelligemment réfléchies en fonction des arrivages et des produits les plus frais. Sa pâtissière Karine Broussier, ancienne de chez Piège, du Lucas Carton et du Ledoyen, ravira également les plus exigeants avec ses desserts mariant les saveurs sucrées et salées avec finesse.`,
+            `Le restaurant offre une ambiance chaleureuse et conviviale, avec une terrasse à ciel ouvert surplombant l’entrée du port ou une très élégante salle en pierres de Bonifacio avec de magnifiques tables en bois d’olivier. Le décor est sobre et chic, sans jamais être guindé.`,
+            `L’Aria Nova propose une variété de plats typiques de la région, tels que les viandes nustrale, les poissons, les fromages, ainsi que des plats typiques bonifaciens, tels que les aubergines ou la langouste royale. La carte est régulièrement mise à jour pour suivre les saisons et proposer des créations plus audacieuses.`
+          ] },
+          { h: 'Cuisine corse et produits locaux', ps: [
+            `La Corse est une île où la gastronomie occupe une place de choix dans la culture locale. Chez Aria Nova, nous sommes fiers de proposer une cuisine corse inventive et raffinée, élaborée à partir de produits locaux de qualité. Nous sélectionnons avec soin les meilleurs ingrédients de l’île, en travaillant avec des producteurs locaux pour garantir une qualité irréprochable : le poisson frais de la Méditerranée, les viandes des montagnes corses, les légumes et les fruits de saison, les fromages et les charcuteries artisanales.`,
+            `Notre chef, passionné par les produits locaux et la cuisine imaginative, crée et réalise avec soin des plats qui distribuent les saveurs de l’île et égaient les palais. Des plats typiques revisités avec une touche de créativité, des produits locaux sublimés par des techniques de cuisine moderne : notre carte est un véritable hommage à la gastronomie corse.`
+          ] },
+          { h: 'Notre histoire : l’aventure d’un restaurant familial', img: 'assets/table-chefs.jpg', ps: [
+            `Aria Nova, c’est l’histoire d’une passion pour la cuisine et les produits locaux. Tout commence il y a quelques années, lorsque Sébastien Caudron, chef expérimenté, tombe sous le charme de la Corse et de ses richesses culinaires.`,
+            `Aria Nova se fait rapidement connaître pour la qualité de sa cuisine et l’originalité de ses plats, et est rapidement référencé dans les guides gastronomiques. Mais ce qui fait la fierté de Patrick, le propriétaire du restaurant, et de son équipe, c’est avant tout la satisfaction de leurs clients, qui reviennent régulièrement pour découvrir de nouvelles créations culinaires et profiter de l’accueil chaleureux et convivial de l’équipe.`,
+            `Aujourd’hui, Aria Nova est devenu une référence à Bonifacio pour les amateurs de cuisine gastronomique et les amoureux des produits locaux. La passion et l’engagement de Patrick, de Sébastien et de son équipe continuent de faire vibrer les papilles et de faire découvrir aux visiteurs de passage toute la richesse de la cuisine corse.`
+          ] },
+          { h: 'Bonifacio, une cité millénaire', ps: [
+            `La ville de Bonifacio, située au sud de la Corse, est une destination prisée pour ses paysages à couper le souffle et son riche patrimoine historique. Fondée au IXᵉ siècle, la ville a connu des siècles de domination génoise, qui ont laissé leur empreinte sur son architecture et sa culture. De nos jours, Bonifacio est célèbre pour son port de plaisance animé, ses ruelles pavées, ses remparts médiévaux et ses plages de sable blanc.`,
+            `Au cœur de cette ville historique, l’Aria Nova offre une expérience culinaire qui mêle tradition et modernité, avec une décoration élégante qui met en valeur l’architecture en pierre de Bonifacio. La terrasse du restaurant offre une vue imprenable sur le port et la vieille ville, créant une atmosphère magique pour les repas du soir. Une visite à Bonifacio ne serait pas complète sans une escale gourmande à l’Aria Nova.`
+          ] }
+        ]
+      },
+      chef: {
+        kicker: 'Le chef & l’équipe', title: 'Chef gastronomique à Bonifacio', img: 'assets/table-chefs.jpg',
+        lead: 'Sébastien Caudron, Karine Broussier et toute une équipe passionnée.',
+        sections: [
+          { h: 'Bienvenue à Aria Nova', img: 'assets/plat-fleurs.jpg', ps: [
+            `Bienvenue à Aria Nova, le restaurant gastronomique dirigé par le chef Sébastien Caudron et son équipe de professionnels à Bonifacio, en Corse du Sud. Notre établissement est situé dans la vieille ville fortifiée, au cœur de l’histoire de la citadelle, où se mêlent culture et gastronomie locale.`,
+            `Notre chef Sébastien, passionné de cuisine depuis son plus jeune âge, a développé son talent en travaillant aux côtés de grands chefs étoilés en France, notamment au Fouquet’s et au Palais Maeterlinck. Son équipe partage cette passion et travaille avec ferveur pour offrir une expérience culinaire exceptionnelle à chaque client.`,
+            `Nous mettons un point d’honneur à utiliser des ingrédients locaux frais pour créer des plats innovants et savoureux qui célèbrent les saveurs de la Corse du Sud. Nous proposons également une carte de vins corses soigneusement sélectionnés pour accompagner nos plats et compléter votre expérience.`
+          ] },
+          { h: 'Karine Broussier, cheffe pâtissière', img: 'assets/dessert-meringue.jpg', ps: [
+            `Ancienne de chez Piège, du Lucas Carton et du Ledoyen, Karine Broussier signe des desserts sublimes et créatifs, qui marient les saveurs sucrées et salées avec finesse : souvenir d’enfance à la châtaigne, fiadone de grand-mère, tiramisu aux canistrelli…`
+          ] },
+          { h: 'La cuisine gastronomique de la Corse', ps: [
+            `La Corse est une île riche en culture et en traditions culinaires, avec une cuisine influencée par les cultures italienne et française. Les repas gastronomiques en Corse sont connus pour leur simplicité, leur authenticité et l’utilisation d’ingrédients locaux : produits de la mer, viande locale, fromages corses, légumes frais et herbes aromatiques de la région.`,
+            `Les vins corses sont également très appréciés pour leur qualité et leur diversité. Nous proposons une carte de vins soigneusement sélectionnés pour compléter les plats, en mettant en avant les vins de la région.`
+          ] }
+        ]
+      },
+      menu: {
+        kicker: 'Le menu', title: 'L’excellence de la cuisine gastronomique à Bonifacio', img: 'assets/aubergines.jpg',
+        lead: 'À la carte, au menu du midi et selon les suggestions du jour.',
+        sections: [
+          { h: 'L’endroit cosy par excellence', ps: [
+            `Si vous êtes à la recherche d’un restaurant à Bonifacio offrant une cuisine raffinée et un cadre vraiment sympa, l’Aria Nova est l’endroit cosy par excellence. Situé à proximité de l’office de tourisme, dans la citadelle de Bonifacio, ce restaurant bénéficie d’un emplacement privilégié pour profiter d’un repas où la convivialité ne fait jamais défaut.`,
+            `À l’intérieur, vous serez charmé par la salle voûtée en pierres blanches typiques de la ville, qui offre un cadre intime et chaleureux pour un dîner romantique ou une soirée entre amis. Si vous préférez dîner en extérieur, vous pourrez profiter de la terrasse au toit escamotable avec une vue imprenable sur l’entrée du port.`,
+            `Le chef Sébastien Caudron vous propose une cuisine gastronomique innovante, mettant en valeur les meilleurs ingrédients locaux de saison. Parmi les plats phares : l’agneau en croûte de pain aux épices, ou encore les crêpes revisitées en raviolis à la crème chiboust.`
+          ] },
+          { h: 'Le menu gastronomique du midi', ps: [
+            `Avant de découvrir la carte du dîner, n’oubliez pas les menus du midi, proposés à des prix abordables. Le restaurant offre une formule déjeuner entrée, plat et dessert, avec des plats qui évoluent au fil des saisons et mettent en avant les produits locaux de la Corse.`,
+            `C’est une excellente occasion de découvrir la cuisine créative et raffinée de l’Aria Nova : une cuisine fine et savoureuse, qui s’inspire des traditions culinaires corses tout en incorporant des influences de la cuisine française.`
+          ] },
+          { h: 'Une cuisine créative à la carte', ps: [
+            `Chaque plat à la carte est élaboré avec soin et créativité. Les produits sont sélectionnés pour leur qualité, leur goût et leur fraîcheur : poissons fraîchement pêchés, viandes locales, légumes cultivés dans la région, herbes et épices typiques de la cuisine corse. Avec une présentation élégante et originale, les plats sont un véritable voyage culinaire qui allie tradition et modernité.`
+          ] }
+        ]
+      },
+      prod: {
+        kicker: 'Les producteurs', title: 'Une cuisine inventive à base de produits locaux corses', img: 'assets/herbes.jpg',
+        lead: 'Viandes d’ici, pêche locale, fruits et légumes de nos terroirs.',
+        sections: [
+          { h: 'La provenance avant tout', ps: [
+            `La cuisine corse est renommée pour ses produits locaux de qualité et l’utilisation de techniques traditionnelles pour les préparer. Le restaurant Aria Nova s’inscrit dans cette tradition en proposant une cuisine inventive et raffinée, qui met en avant les produits locaux de la région. Le chef Sébastien Caudron est particulièrement attentif à la provenance des produits utilisés dans ses plats. Il travaille en étroite collaboration avec les producteurs locaux pour offrir une cuisine authentique, qui respecte les saisons.`,
+            `Pour les viandes, le restaurant privilégie l’élevage local, comme le veau corse ou le porc nustrale. Les produits de la mer sont mis à l’honneur avec des poissons et fruits de mer fraîchement pêchés dans la région : dorade, bar ou encore langouste. Enfin, les fruits et légumes locaux apportent fraîcheur et saveur, pour des plats créatifs tels que les aubergines farcies au brocciu, les tomates farcies ou les figues rôties au miel du maquis.`
+          ] },
+          { h: 'Ambassadeur des produits locaux à Bonifacio', img: 'assets/table-plat.jpg', ps: [
+            `L’Aria Nova se positionne comme un précurseur dans l’utilisation des circuits courts. Le restaurant a été le premier client de Marc et Charlène, les fondateurs du Potager en Herbes, un jardin en permaculture proposant des fruits et légumes issus de l’agriculture biologique. Cette initiative a rapidement attiré l’attention de l’office du tourisme ainsi que du réseau « Qualité Tourisme » lors du lancement du Réseau Produit Local « Nustrale » de Bonifacio. Depuis, l’Aria Nova s’est engagé à devenir un ambassadeur de ce réseau et promeut activement le respect de l’environnement et les circuits courts.`,
+            `Le restaurant privilégie les produits locaux corses, tels que la charcuterie AOP de Loreto di Casinca, les fromages corses, la pêche locale et les viandes, notamment le veau corse et le cochon nustrale.`
+          ] },
+          { h: 'Viande locale corse : une sélection rigoureuse', ps: [
+            `Nous nous approvisionnons auprès d’éleveurs locaux qui respectent les traditions et le savoir-faire de la région. Les bovins corses sont élevés en liberté dans des pâturages naturels, nourris exclusivement avec des aliments naturels comme l’herbe et les céréales locales, sans recours aux hormones ni aux antibiotiques. Nous proposons ainsi des plats tels que le veau corse rôti, accompagné de légumes de saison.`
+          ] },
+          { h: 'La viande nustrale, une tradition à découvrir', ps: [
+            `L’Aria Nova propose de la viande « nustrale » provenant d’élevages situés dans la région de Bonifacio, grâce à des partenariats de confiance avec des éleveurs qui respectent les traditions et les normes de qualité de cette appellation.`,
+            `Une petite histoire illustre son importance : il y a quelques années, un éleveur local a refusé de vendre sa viande à un restaurant étoilé, malgré une proposition financière très intéressante. Il était fier de produire une viande de qualité supérieure en respectant les traditions, et refusait de céder aux exigences commerciales. C’est ce genre d’engagement que nous soutenons, en cuisinant cette viande avec soin pour en révéler toute la finesse.`
+          ] },
+          { h: 'La pêche locale', img: 'assets/plat-fleurs.jpg', ps: [
+            `Notre île regorge de poissons et fruits de mer exceptionnels, pêchés par des pêcheurs locaux passionnés et expérimentés, qui respectent les règles strictes de pêche durable et les quotas pour préserver la richesse de nos fonds marins. Nous nous approvisionnons régulièrement auprès d’eux, et les plats de poisson et fruits de mer changent au gré des arrivages du jour.`
+          ] },
+          { h: 'Les fruits et légumes de nos terroirs', ps: [
+            `Tomates juteuses, courgettes croquantes, aubergines parfumées, herbes aromatiques : nous travaillons avec des agriculteurs et maraîchers locaux pour des produits cueillis à maturité.`,
+            `Nous sommes particulièrement fiers de travailler avec le jardin en permaculture « Le Potager en Herbes » de Marc et Charlène, à quelques kilomètres de Bonifacio. Grâce à leur méthode de culture respectueuse de l’environnement, sans pesticides ni engrais chimiques, ils produisent des légumes d’une qualité exceptionnelle que nous mettons à l’honneur dans nos plats.`
+          ] }
+        ]
+      },
+      blog: {
+        kicker: 'Le blog', title: 'La gastronomie corse, une invitation au voyage des sens', img: 'assets/dessert-poire.jpg',
+        lead: 'Produits, traditions et spécialités de l’île de Beauté.',
+        sections: [
+          { h: 'Les délices de la gastronomie nustrale', ps: [
+            `La gastronomie corse est riche et variée, reflétant les influences multiples de l’histoire de l’île : fromages, charcuterie, miel, herbes aromatiques, fruits et légumes de saison, poissons et fruits de mer fraîchement pêchés en Méditerranée.`,
+            `Les fromages corses sont particulièrement réputés, comme le brocciu, frais et crémeux, à base de lait de brebis ou de chèvre, le niulincu ou le casgiu merzu. La charcuterie est un incontournable : le figatellu, saucisse de foie de porc séchée, le lonzu, le prisuttu. Les amateurs de viande dégusteront l’agneau de lait de Corse ou le cochon nustrale, race de porc locale.`,
+            `Côté légumes : asperges sauvages, châtaignes, courgettes farcies au brocciu, aubergines à la bonifacienne. Côté mer : calamars à la bonifacienne, langoustines flambées. Et pour les gourmands : canistrelli, fiadone, tarte au citron corse.`
+          ] },
+          { h: 'Quand la nature inspire la gastronomie', img: 'assets/herbes.jpg', ps: [
+            `La gastronomie corse est simple et savoureuse, ancrée dans les valeurs de l’île. Agriculture locale et pêche en mer y sont incontournables, et les producteurs ont su préserver des méthodes traditionnelles et écologiques.`,
+            `L’Aria Nova est un fervent défenseur de cette gastronomie et en met les valeurs à l’honneur dans chacun de ses plats. La cuisine corse est une cuisine de partage et de convivialité, servie lors des fêtes de village, des mariages et des repas de famille : c’est cette tradition que la maison revisite avec passion et créativité.`
+          ] },
+          { h: 'Un voyage culinaire au cœur de Bonifacio', ps: [
+            `Bonifacio, à l’extrême sud de la Corse, est connue pour son port pittoresque, ses falaises de calcaire et son centre médiéval, mais aussi pour sa gastronomie : la minestra, soupe corse aux légumes et haricots, les langoustes et poissons grillés, la charcuterie (lonzu, prisuttu) et le brocciu, utilisé dans les pâtes et les desserts.`,
+            `Pour une expérience gastronomique exceptionnelle, l’Aria Nova utilise les produits locaux pour créer des plats innovants et raffinés, accompagnés de vins corses sélectionnés avec soin.`
+          ] }
+        ]
+      }
+    };
+    const pageKey = this.state.page || 'home';
+    const isHome = pageKey === 'home';
+    const P = PG[pageKey];
+    const pageSections = P ? P.sections.map((sec, i) => ({ h: sec.h, ps: sec.ps.map((txt) => ({ txt })), num: String(i + 1).padStart(2, '0'), img: sec.img || '', hasImg: !!sec.img })) : [];
+    const go = (k) => () => { this.setState({ page: k, menu: false }); try { window.scrollTo(0, 0); } catch (e) {} };
+    const navDefs = [
+      ['home', pick3('Accueil', 'Home', 'Home')], ['cave', t.nav_cave], ['resto', pick3('Le restaurant', 'The restaurant', 'Il ristorante')],
+      ['chef', pick3('Le chef & l’équipe', 'Chef & team', 'Lo chef & la squadra')], ['menu', pick3('Le menu', 'The menu', 'Il menù')],
+      ['prod', pick3('Les producteurs', 'Producers', 'I produttori')], ['blog', pick3('Le blog', 'Blog', 'Blog')]
+    ];
+    const navItems = navDefs.map(([k, label]) => ({ label, go: go(k), current: k === pageKey ? 'page' : 'false', style: 'background: none; border: 0; padding: 6px 0; min-height: 44px; cursor: pointer; font-family: Jost, sans-serif; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: #F4EEE4; ' + (k === pageKey ? 'text-decoration: underline; text-underline-offset: 8px; text-decoration-color: #C99C61;' : ''), styleBig: 'background: none; border: 0; border-bottom: 1px solid rgba(244,238,228,.12); padding: 12px 0; text-align: left; cursor: pointer; font-family: Jost, sans-serif; font-size: 26px; font-weight: 200; letter-spacing: .12em; text-transform: uppercase; color: ' + (k === pageKey ? '#E7CFA6' : '#F4EEE4') + ';' }));
+    const relatedKeys = ['cave', 'resto', 'chef', 'menu', 'prod', 'blog'].filter((k) => k !== pageKey).slice(0, 3);
+    const related = relatedKeys.map((k) => ({ kicker: PG[k].kicker, title: PG[k].title, img: PG[k].img, go: go(k) }));
+    const langs = ['FR', 'EN', 'IT'].map((code) => {
+      const on = code === L;
+      const base = 'min-width: 44px; min-height: 44px; border: 0; background-color: transparent; cursor: pointer; font-family: Jost, sans-serif; font-size: 12px; letter-spacing: .14em; text-underline-offset: 6px; ';
+      return {
+        code,
+        pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ lang: code }),
+        style: base + 'color: ' + (on ? '#F4EEE4' : '#B9AF9F') + '; font-weight: ' + (on ? '600' : '400') + '; text-decoration: ' + (on ? 'underline' : 'none') + ';',
+        styleDark: base + 'color: ' + (on ? '#F4EEE4' : '#9C9284') + '; font-weight: ' + (on ? '600' : '400') + '; text-decoration: ' + (on ? 'underline' : 'none') + ';'
+      };
+    });
+    const plates = [
+      { num: '01', title: pick3('Aubergines à la bonifacienne', 'Bonifacio-style aubergines', 'Melanzane alla bonifacina'), src: 'assets/aubergines.jpg', alt: menu.entrees.alt },
+      { num: '02', title: pick3('L’assiette du jardin', 'From the garden', 'Il piatto dell’orto'), src: 'assets/plat-fleurs.jpg', alt: menu.terre.alt },
+      { num: '03', title: pick3('Meringue & capucine', 'Meringue & nasturtium', 'Meringa & nasturzio'), src: 'assets/dessert-meringue.jpg', alt: menu.desserts.alt },
+      { num: '04', title: pick3('Poires & crumble', 'Pears & crumble', 'Pere & crumble'), src: 'assets/dessert-poire.jpg', alt: pick3('Dessert aux poires et crumble de cacao', 'Pear dessert with cocoa crumble', 'Dessert di pere e crumble al cacao') },
+      { num: '05', title: pick3('Au service', 'At the table', 'In tavola'), src: 'assets/table-plat.jpg', alt: menu.mer.alt },
+      { num: '06', title: pick3('Les herbes du potager', 'Herbs from the garden', 'Le erbe dell’orto'), src: 'assets/herbes.jpg', alt: pick3('Herbes fraîches préparées à la main', 'Fresh herbs prepared by hand', 'Erbe fresche preparate a mano') }
+    ];
+    const producers = [
+      { num: '01', name: 'Le Potager en Herbes', text: pick3('Le jardin en permaculture de Marc et Charlène, à quelques kilomètres. Légumes, aromates et fleurs comestibles.', 'Marc and Charlène’s permaculture garden, a few kilometres away. Vegetables, herbs and edible flowers.', 'L’orto in permacultura di Marc e Charlène, a pochi chilometri. Verdure, erbe aromatiche e fiori eduli.') },
+      { num: '02', name: 'Loreto di Casinca', text: pick3('Jambon et charcuterie corses AOP, parmi les meilleurs de l’île.', 'PDO Corsican ham and charcuterie, among the island’s finest.', 'Prosciutto e salumi corsi DOP, tra i migliori dell’isola.') },
+      { num: '03', name: pick3('Éleveurs du pays', 'Local farmers', 'Allevatori locali'), text: pick3('Veau corse et cochon nustrale, élevés en liberté dans la région de Bonifacio.', 'Corsican veal and nustrale pork, free-range around Bonifacio.', 'Vitello corso e maiale nustrale, allevati allo stato brado intorno a Bonifacio.') },
+      { num: '04', name: pick3('Pêcheurs locaux', 'Local fishermen', 'Pescatori locali'), text: pick3('Dorade, bar, denti et langouste royale, en pêche durable.', 'Sea bream, sea bass, dentex and spiny lobster, sustainably caught.', 'Orata, spigola, dentice e aragosta, da pesca sostenibile.') },
+      { num: '05', name: pick3('Fromagers de l’île', 'Island cheesemakers', 'Casari dell’isola'), text: pick3('Brocciu, chèvre de « Noélie » et fromages corses, avec confiture de figues.', 'Brocciu, “Noélie” goat cheese and Corsican cheeses, with fig jam.', 'Brocciu, caprino di « Noélie » e formaggi corsi, con confettura di fichi.') }
+    ];
+    return {
+      accent,
+      t,
+      tabs,
+      langs,
+      plates,
+      producers,
+      tabId: this.state.tab,
+      tabImg: cur.img,
+      tabAlt: cur.alt,
+      tabLabel: cur.label,
+      tabIntro: cur.intro,
+      dishes,
+      isWine,
+      isDishes: !isWine,
+      wineGroups,
+      wineHead,
+      menuOpen: this.state.menu,
+      isHome,
+      isSub: !isHome,
+      showCarte: isHome || pageKey === 'menu',
+      pageKey,
+      pageImg: P ? P.img : '',
+      pageKicker: P ? P.kicker : '',
+      pageTitle: P ? P.title : '',
+      pageLead: P ? P.lead : '',
+      pageSections,
+      navItems,
+      related,
+      goHome: go('home'),
+      goReserve: () => { this.setState({ page: 'home', menu: false }); setTimeout(() => { try { const el = document.getElementById('reserver'); if (el) el.scrollIntoView({ behavior: 'smooth' }); } catch (e) {} }, 120); },
+      menuExpanded: this.state.menu ? 'true' : 'false',
+      toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      closeMenu: () => this.setState({ menu: false }),
+      book: () => this.setState({ booked: true }),
+      bookLabel: this.state.booked ? t.booked : t.book
+    };
+  }
+}
+DCMount(Component, 'tpl', 'app');
+</script>
+</body>
+</html>
